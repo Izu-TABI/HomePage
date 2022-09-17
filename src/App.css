@@ -8,13 +8,28 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
+  position: relative;
 }
 .home-main-title {
   color: rgb(80, 79, 79);
   font-size: 2em;
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+.home-main ul {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 300px;
+}
+.home-main ul li {
+  list-style: none;
+}
+.home-main ul li:not(:nth-child(4)) {
+  margin-right: 30px;
 }/*# sourceMappingURL=App.css.map */
