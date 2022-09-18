@@ -76,8 +76,10 @@
 
   }
 
-
-
+  #mask {
+    display: none;
+    transition: all 0.5s;
+  }
 
   &-title { 
     color: rgb(80, 79, 79);

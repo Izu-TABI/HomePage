@@ -74,6 +74,10 @@
 .home-main .toggle-btn span:nth-child(3) {
   bottom: 4px;
 }
+.home-main #mask {
+  display: none;
+  transition: all 0.5s;
+}
 .home-main-title {
   color: rgb(80, 79, 79);
   font-size: 5vh;
