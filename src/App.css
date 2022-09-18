@@ -9,6 +9,10 @@
   height: 100vh;
   background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .home-main nav {
   display: block;
