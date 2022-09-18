@@ -26,7 +26,7 @@ function Hamburger() {
         <span></span>
       </div>
 
-      <div className="mask"></div>
+      <div id="mask"></div>
     </div>
   )
 }

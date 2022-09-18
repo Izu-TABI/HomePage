@@ -45,6 +45,24 @@
 .home-main nav .inner ul li a:hover {
   background-color: #e4e4e4;
 }
+.home-main #mask {
+  display: none;
+  transition: all 0.5s;
+}
+.home-main .open nav {
+  opacity: 1;
+  left: 0;
+}
+.home-main .open #mask {
+  display: block;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0.8;
+}
 .home-main .toggle-btn {
   display: block;
   position: fixed;
@@ -73,10 +91,6 @@
 }
 .home-main .toggle-btn span:nth-child(3) {
   bottom: 4px;
-}
-.home-main #mask {
-  display: none;
-  transition: all 0.5s;
 }
 .home-main-title {
   color: rgb(80, 79, 79);
