@@ -1,13 +1,14 @@
 import React from 'react'
 
 function Hamburger() {
-  function addClass() {
-    let nav = document.querySelector("#navArea");
 
+  function addClass() {
+    const nav = document.querySelector("#navArea");
     nav.classList.toggle("open");
   }
 
   function maskClick() {
+    const nav = document.querySelector("#navArea");
     nav.classList.toggle("open");
   }
 
@@ -25,9 +26,9 @@ function Hamburger() {
       </nav>
 
       <div className="toggle-btn" onClick={addClass}>
-        <span></span>
-        <span></span>
-        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
       </div>
 
       <div id="mask" onClick={maskClick}></div>
