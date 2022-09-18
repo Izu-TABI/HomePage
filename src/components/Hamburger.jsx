@@ -19,8 +19,9 @@ function Hamburger() {
         <div className="inner">
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Skill</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="#">Likes</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Activities</a></li>
           </ul>
         </div>
       </nav>
