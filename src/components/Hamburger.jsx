@@ -7,6 +7,10 @@ function Hamburger() {
     nav.classList.toggle("open");
   }
 
+  function maskClick() {
+    nav.classList.toggle("open");
+  }
+
 
   return (
     <div id='navArea'>
@@ -26,7 +30,7 @@ function Hamburger() {
         <span></span>
       </div>
 
-      <div id="mask"></div>
+      <div id="mask" onClick={maskClick}></div>
     </div>
   )
 }
