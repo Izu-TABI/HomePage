@@ -1,6 +1,13 @@
 import React from 'react'
 
 function Hamburger() {
+  function addClass() {
+    let nav = document.querySelector("#navArea");
+
+    nav.classList.toggle("open");
+  }
+
+
   return (
     <div id='navArea'>
       <nav>
@@ -13,8 +20,7 @@ function Hamburger() {
         </div>
       </nav>
 
-
-      <div className="toggle-btn">
+      <div className="toggle-btn" onClick={addClass}>
         <span></span>
         <span></span>
         <span></span>
@@ -24,5 +30,7 @@ function Hamburger() {
     </div>
   )
 }
+
+
 
 export default Hamburger
