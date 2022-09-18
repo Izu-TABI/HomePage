@@ -19,7 +19,7 @@
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
 }
-.home-main ul {
+.home-main .home-sns-icon-area {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -27,13 +27,13 @@
   display: flex;
   margin-bottom: 300px;
 }
-.home-main ul li {
+.home-main .home-sns-icon-area .sns-icon {
   list-style: none;
 }
-.home-main ul li:not(:nth-child(4)) {
+.home-main .home-sns-icon-area .sns-icon:not(:nth-child(4)) {
   margin-right: 30px;
 }
-.home-main ul img {
+.home-main .home-sns-icon-area img {
   height: 45px;
   width: 45px;
 }/*# sourceMappingURL=App.css.map */

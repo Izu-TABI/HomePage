@@ -10,6 +10,8 @@
   background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
   position: relative;
 
+  
+
   &-title { 
     color: rgb(80, 79, 79);
     font-size: 5vh;
@@ -21,7 +23,7 @@
     -webkit-transform: translateY(-50%) translateX(-50%);
   }
 
-  ul {
+  .home-sns-icon-area {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -29,7 +31,7 @@
     display: flex;
     margin-bottom: 300px;
 
-    li {
+    .sns-icon {
       list-style: none;
       &:not(:nth-child(4)) {
         margin-right: 30px;
@@ -41,6 +43,5 @@
       width: 45px;
     }
   }
-
   
 }
