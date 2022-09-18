@@ -32,4 +32,8 @@
 }
 .home-main ul li:not(:nth-child(4)) {
   margin-right: 30px;
+}
+.home-main ul img {
+  height: 45px;
+  width: 45px;
 }/*# sourceMappingURL=App.css.map */
