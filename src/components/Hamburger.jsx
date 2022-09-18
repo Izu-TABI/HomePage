@@ -12,7 +12,13 @@ function Hamburger() {
           </ul>
         </div>
       </nav>
-      
+
+
+      <div className="toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   )
 }
