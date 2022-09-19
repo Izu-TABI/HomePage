@@ -106,8 +106,9 @@
   bottom: 4px;
 }
 .home-main-title {
+  white-space: nowrap;
   color: rgb(80, 79, 79);
-  font-size: 5vh;
+  font-size: 7vh;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -118,17 +119,17 @@
   position: absolute;
   bottom: 0;
   left: 50%;
+  bottom: 35%;
   transform: translateX(-50%);
   display: flex;
-  margin-bottom: 300px;
 }
 .home-main .home-sns-icon-area .sns-icon {
   list-style: none;
 }
 .home-main .home-sns-icon-area .sns-icon:not(:nth-child(4)) {
-  margin-right: 30px;
+  margin-right: 7vw;
 }
 .home-main .home-sns-icon-area img {
-  height: 45px;
-  width: 45px;
+  height: 5vh;
+  width: 5vh;
 }/*# sourceMappingURL=App.css.map */
