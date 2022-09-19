@@ -18,10 +18,10 @@ function Hamburger() {
       <nav>
         <div className="inner">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Likes</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Activities</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/likes">Likes</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/activitives">Activities</a></li>
           </ul>
         </div>
       </nav>
