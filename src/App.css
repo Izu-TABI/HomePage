@@ -19,9 +19,7 @@
   display: block;
   width: 220px;
   position: fixed;
-  background-color: #ffffff;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  background: linear-gradient(rgb(217, 255, 212), rgb(180, 180, 180));
   top: 0;
   left: -300px;
   bottom: 0;
@@ -50,7 +48,7 @@
   transition-duration: 0.2s;
 }
 .home-main nav .inner ul li a:hover {
-  background-color: #e4e4e4;
+  border-left: 10px solid #737373;
 }
 .home-main #mask {
   display: none;
@@ -62,7 +60,7 @@
 }
 .home-main .open #mask {
   display: block;
-  background-color: rgb(145, 145, 145);
+  background-color: rgb(141, 151, 126);
   width: 100vw;
   height: 100vh;
   top: 0;
