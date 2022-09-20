@@ -134,8 +134,15 @@
   width: 5vh;
 }
 
-.likes-main {
+.main {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
+}
+.main .contents {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=App.css.map */

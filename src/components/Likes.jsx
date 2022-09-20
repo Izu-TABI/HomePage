@@ -2,11 +2,13 @@ import React from 'react'
 
 function Likes() {
   return (
-    <div className="likes-main">
-        <div className="contents">
-            <h2 className="likes-title">
+    <div className="main">
+        <h2 className="title">
                 Likes
-            </h2>
+        </h2>
+        
+        <div className="contents">
+
             <ul>
                 <li>Apple</li>
                 <li>Computer</li>
