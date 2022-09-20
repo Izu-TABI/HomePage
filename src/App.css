@@ -163,4 +163,7 @@ nav .inner ul li a:hover {
 }
 .main .contents .likes-list li {
   padding-bottom: 5vh;
+}
+.main .contents .likes-list li a {
+  color: rgb(44, 38, 38);
 }/*# sourceMappingURL=App.css.map */
