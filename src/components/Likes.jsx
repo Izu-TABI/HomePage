@@ -2,7 +2,9 @@ import React from 'react'
 
 function Likes() {
   return (
-    <div>Likes</div>
+    <div className="likes-main">
+        
+    </div>
   )
 }
 

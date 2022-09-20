@@ -132,4 +132,10 @@
 .home-main .home-sns-icon-area img {
   height: 5vh;
   width: 5vh;
+}
+
+.likes-main {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
 }/*# sourceMappingURL=App.css.map */
