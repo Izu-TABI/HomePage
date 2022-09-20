@@ -144,6 +144,7 @@ nav .inner ul li a:hover {
   background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
 }
 .main .title {
+  font-size: vh;
   position: absolute;
   left: 50%;
   top: 14%;
@@ -156,6 +157,7 @@ nav .inner ul li a:hover {
   justify-content: center;
 }
 .main .contents .likes-list {
+  width: 50%;
   position: absolute;
   top: 30vh;
 }

@@ -154,12 +154,16 @@ nav {
   
 }
 
+// components
+
 .main {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
 
   .title {
+    font-size: vh;
+
     position: absolute;
     left: 50%;
     top: 14%;
@@ -173,6 +177,7 @@ nav {
     justify-content: center;
 
     .likes-list {
+      width: 50%;
       position: absolute;
       top: 30vh;
       li { 
