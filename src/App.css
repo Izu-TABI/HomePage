@@ -4,18 +4,7 @@
   overflow: hidden;
 }
 
-.home-main {
-  display: inline-block;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.home-main nav {
+nav {
   display: block;
   width: 220px;
   position: fixed;
@@ -27,19 +16,19 @@
   z-index: 3;
   opacity: 0;
 }
-.home-main nav .inner {
+nav .inner {
   padding: 25px;
 }
-.home-main nav .inner ul {
+nav .inner ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.home-main nav .inner ul li {
+nav .inner ul li {
   margin: 0;
   border-bottom: 1px solid #333;
 }
-.home-main nav .inner ul li a {
+nav .inner ul li a {
   text-decoration: none;
   color: #333;
   display: block;
@@ -47,18 +36,20 @@
   padding: 1rem;
   transition-duration: 0.2s;
 }
-.home-main nav .inner ul li a:hover {
+nav .inner ul li a:hover {
   border-left: 10px solid #737373;
 }
-.home-main #mask {
+
+#mask {
   display: none;
   transition: all 0.5s;
 }
-.home-main .open nav {
+
+.open nav {
   opacity: 1;
   left: 0;
 }
-.home-main .open #mask {
+.open #mask {
   display: block;
   background-color: rgb(141, 151, 126);
   width: 100vw;
@@ -67,16 +58,17 @@
   left: 0;
   position: fixed;
 }
-.home-main .open .toggle-btn span:nth-child(1) {
+.open .toggle-btn span:nth-child(1) {
   transform: translateY(10px) rotate(-315deg);
 }
-.home-main .open .toggle-btn span:nth-child(2) {
+.open .toggle-btn span:nth-child(2) {
   opacity: 0;
 }
-.home-main .open .toggle-btn span:nth-child(3) {
+.open .toggle-btn span:nth-child(3) {
   transform: translateY(-10px) rotate(315deg);
 }
-.home-main .toggle-btn {
+
+.toggle-btn {
   display: block;
   position: fixed;
   top: 30px;
@@ -86,7 +78,7 @@
   z-index: 3;
   cursor: pointer;
 }
-.home-main .toggle-btn span {
+.toggle-btn span {
   position: absolute;
   display: block;
   left: 0;
@@ -96,14 +88,26 @@
   transition: all 0.5s;
   border-radius: 4px;
 }
-.home-main .toggle-btn span:nth-child(1) {
+.toggle-btn span:nth-child(1) {
   top: 4px;
 }
-.home-main .toggle-btn span:nth-child(2) {
+.toggle-btn span:nth-child(2) {
   top: 14px;
 }
-.home-main .toggle-btn span:nth-child(3) {
+.toggle-btn span:nth-child(3) {
   bottom: 4px;
+}
+
+.home-main {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .home-main-title {
   white-space: nowrap;
