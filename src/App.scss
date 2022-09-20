@@ -158,14 +158,27 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
+
+  .title {
+    position: absolute;
+    left: 50%;
+    top: 14%;
+
+    transform: translateX(-50%);
+  }
   .contents {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    
+    .likes-list {
+      position: absolute;
+      top: 30vh;
+      li { 
+        padding-bottom: 5vh;
+      }
+    }
   }
 
 }

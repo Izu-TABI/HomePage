@@ -6,10 +6,10 @@ function Likes() {
         <h2 className="title">
                 Likes
         </h2>
-        
+
         <div className="contents">
 
-            <ul>
+            <ul className="likes-list">
                 <li>Apple</li>
                 <li>Computer</li>
                 <li>JavaScript</li>
