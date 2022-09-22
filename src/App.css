@@ -144,7 +144,7 @@ nav .inner ul li a:hover {
   background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
 }
 .main .title {
-  font-size: vh;
+  font-size: 4vh;
   position: absolute;
   left: 50%;
   top: 14%;
@@ -166,4 +166,10 @@ nav .inner ul li a:hover {
 }
 .main .contents .likes-list li a {
   color: rgb(44, 38, 38);
+}
+.main .contents .block-txt {
+  position: absolute;
+  top: 30vh;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }/*# sourceMappingURL=App.css.map */

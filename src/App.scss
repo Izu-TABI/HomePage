@@ -162,7 +162,7 @@ nav {
   background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
 
   .title {
-    font-size: vh;
+    font-size: 4vh;
 
     position: absolute;
     left: 50%;
@@ -186,6 +186,13 @@ nav {
           color:rgb(44, 38, 38);
         }
       }
+    }
+
+    .block-txt {
+      position: absolute;
+      top: 30vh;
+      transform: translateX(-50%);
+      white-space: nowrap;
     }
   }
 
