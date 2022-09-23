@@ -233,9 +233,20 @@ nav {
       background-color: rgb(159, 159, 159);
     }
   }
+}// main
 
-}
 
-.contents {
-  display: flex;
+.works-main {
+  .works-title {
+    font-size: 4vh;
+
+    position: absolute;
+    left: 50%;
+    top: 14%;
+
+    transform: translateX(-50%);
+  }
+  .work-block {
+    margin-top: 45px;
+  }
 }

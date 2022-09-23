@@ -206,4 +206,15 @@ nav .inner ul li a:hover {
   width: 100vw;
   height: 1px;
   background-color: rgb(159, 159, 159);
+}
+
+.works-main .works-title {
+  font-size: 4vh;
+  position: absolute;
+  left: 50%;
+  top: 14%;
+  transform: translateX(-50%);
+}
+.works-main .work-block {
+  margin-top: 45px;
 }/*# sourceMappingURL=App.css.map */
