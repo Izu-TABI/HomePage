@@ -184,7 +184,6 @@ nav .inner ul li a:hover {
   left: 50%;
   width: 60vw;
   transform: translateX(-50%);
-  white-space: nowrap;
 }
 .main .contents .block-txt {
   margin-top: 30px;
