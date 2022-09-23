@@ -187,6 +187,7 @@ nav .inner ul li a:hover {
   white-space: nowrap;
 }
 .main .contents .block-txt {
+  margin-top: 30px;
   position: relative;
 }
 .main .contents .block-txt .block-date {
