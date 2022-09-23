@@ -177,7 +177,8 @@ nav .inner ul li a:hover {
 .main .contents .likes-list li a {
   color: rgb(44, 38, 38);
 }
-.main .contents .block-txt {
+.main .contents .block {
+  display: block;
   position: absolute;
   top: 35vh;
   left: 50%;
@@ -185,10 +186,17 @@ nav .inner ul li a:hover {
   transform: translateX(-50%);
   white-space: nowrap;
 }
+.main .contents .block-txt {
+  position: relative;
+}
 .main .contents .block-txt .block-date {
   color: rgb(122, 122, 122);
 }
-.main .contents .block-txt .block-date .date::after {
+.main .contents .block-txt p.tit {
+  color: rgb(40, 39, 39);
+  margin-top: 9px;
+}
+.main .contents span.date::after {
   content: "";
   position: absolute;
   top: 0;
@@ -198,8 +206,4 @@ nav .inner ul li a:hover {
   width: 100vw;
   height: 1px;
   background-color: rgb(159, 159, 159);
-}
-.main .contents .block-txt p.tit {
-  color: rgb(40, 39, 39);
-  margin-top: 9px;
 }/*# sourceMappingURL=App.css.map */
