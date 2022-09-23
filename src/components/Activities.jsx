@@ -19,7 +19,7 @@ function Activities() {
                             </p>
                         </div>
                         <p className="tit">
-                            中国地区高専コンピュータフェスティバル
+                            中国地区高専コンピュータフェスティバル - ゲーム部門
                         </p>
                         <div className="block-txt"></div>
                     </div>

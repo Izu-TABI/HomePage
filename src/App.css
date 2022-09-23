@@ -9,6 +9,11 @@
   outline: none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 nav {
   display: block;
   width: 220px;
@@ -176,8 +181,12 @@ nav .inner ul li a:hover {
   position: absolute;
   top: 35vh;
   left: 50%;
+  width: 60vw;
   transform: translateX(-50%);
   white-space: nowrap;
+}
+.main .contents .block-txt .block-date {
+  color: rgb(122, 122, 122);
 }
 .main .contents .block-txt .block-date .date::after {
   content: "";
@@ -186,7 +195,11 @@ nav .inner ul li a:hover {
   bottom: 0;
   margin-top: 9px;
   margin-left: 10px;
-  width: 100%;
+  width: 100vw;
   height: 1px;
-  background-color: #999;
+  background-color: rgb(159, 159, 159);
+}
+.main .contents .block-txt p.tit {
+  color: rgb(40, 39, 39);
+  margin-top: 9px;
 }/*# sourceMappingURL=App.css.map */
