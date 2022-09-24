@@ -44,8 +44,7 @@ nav {
           padding: 1rem;
           transition-duration: 0.2s;
           &:hover {
-            background-color:#ebebeb;
-            border-radius: 5px;
+            background-color: rgb(229, 229, 229);
           }
         }//a
       }//li
@@ -133,7 +132,7 @@ nav {
 
   &-title { 
     white-space: nowrap;
-    color: rgb(80, 79, 79);
+    color: rgb(0, 0, 0);
     font-size: 7vh;
     position: absolute;
     top: 45%;
@@ -204,7 +203,7 @@ nav {
     .block {
       display: block;
       position: absolute;
-      top: 35vh;
+      top: 25vh;
       left: 50%;
       width: 60vw;
       transform: translateX(-50%);

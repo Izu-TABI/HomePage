@@ -47,8 +47,7 @@ nav .inner ul li a {
   transition-duration: 0.2s;
 }
 nav .inner ul li a:hover {
-  background-color: #ebebeb;
-  border-radius: 5px;
+  background-color: rgb(229, 229, 229);
 }
 
 #mask {
@@ -121,7 +120,7 @@ nav .inner ul li a:hover {
 }
 .home-main-title {
   white-space: nowrap;
-  color: rgb(80, 79, 79);
+  color: rgb(0, 0, 0);
   font-size: 7vh;
   position: absolute;
   top: 45%;
@@ -179,7 +178,7 @@ nav .inner ul li a:hover {
 .main .contents .block {
   display: block;
   position: absolute;
-  top: 35vh;
+  top: 25vh;
   left: 50%;
   width: 60vw;
   transform: translateX(-50%);
