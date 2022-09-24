@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: auto;
+  overflow-x: hidden;
 }
 *::before {
   box-sizing: border-box;
@@ -117,6 +118,7 @@ nav .inner ul li a:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  overflow-y: hidden;
 }
 .home-main-title {
   white-space: nowrap;
@@ -180,7 +182,7 @@ nav .inner ul li a:hover {
   position: absolute;
   top: 25vh;
   left: 50%;
-  width: 60vw;
+  width: 70%;
   transform: translateX(-50%);
 }
 .main .contents .block-txt {
@@ -211,6 +213,14 @@ nav .inner ul li a:hover {
   position: absolute;
   left: 50%;
   top: 14%;
+  transform: translateX(-50%);
+}
+.works-main .works-contents {
+  display: block;
+  position: absolute;
+  top: 22vh;
+  left: 50%;
+  width: 60vw;
   transform: translateX(-50%);
 }
 .works-main .work-block {
