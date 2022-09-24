@@ -57,6 +57,7 @@ nav .inner ul li a:hover {
 }
 
 .open nav {
+  box-shadow: 2px 3px 4px rgb(138, 137, 137);
   opacity: 1;
   left: 0;
 }
