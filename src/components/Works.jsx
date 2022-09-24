@@ -41,7 +41,7 @@ function Works() {
                 <div className="work-block">
                     <a href="https://github.com/Izu-TABI/speak_clock">speak clock</a>
                     <p>JavaScript<br/>
-                        時刻を取得して読み上げるというもの。ネタ。<br/>
+                        時刻を取得して読み上げるというもの。ネタです。<br/>
                         <a href="https://izu-tabi.github.io/speak_clock/">公開リンク</a>
                     </p>
                 </div>

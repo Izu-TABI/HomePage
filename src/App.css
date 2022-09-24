@@ -18,7 +18,7 @@ nav {
   display: block;
   width: 220px;
   position: fixed;
-  background: linear-gradient(rgb(217, 255, 212), rgb(180, 180, 180));
+  background-color: #ffffff;
   top: 0;
   left: -300px;
   bottom: 0;
@@ -47,7 +47,8 @@ nav .inner ul li a {
   transition-duration: 0.2s;
 }
 nav .inner ul li a:hover {
-  border-left: 10px solid #737373;
+  background-color: #ebebeb;
+  border-radius: 5px;
 }
 
 #mask {
@@ -61,7 +62,7 @@ nav .inner ul li a:hover {
 }
 .open #mask {
   display: block;
-  background-color: rgb(141, 151, 126);
+  background-color: rgb(229, 229, 229);
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -112,7 +113,6 @@ nav .inner ul li a:hover {
   display: inline-block;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -151,7 +151,6 @@ nav .inner ul li a:hover {
 .main {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
 }
 .main .title {
   font-size: 4vh;

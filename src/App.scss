@@ -18,7 +18,8 @@ nav {
   display: block;
   width: 220px;
   position: fixed;
-  background: linear-gradient(rgb(217, 255, 212), rgb(180, 180, 180));
+  background-color: #ffffff;
+  // background: linear-gradient(rgb(217, 255, 212), rgb(180, 180, 180));
   
   top: 0;
   left: -300px;
@@ -43,7 +44,8 @@ nav {
           padding: 1rem;
           transition-duration: 0.2s;
           &:hover {
-            border-left: 10px solid #737373;
+            background-color:#ebebeb;
+            border-radius: 5px;
           }
         }//a
       }//li
@@ -64,7 +66,8 @@ nav {
 
   #mask {
     display: block;
-    background-color: rgb(141, 151, 126);
+    background-color: rgb(229, 229, 229);
+    // background-color:rgb(122, 122, 122);
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -103,7 +106,7 @@ nav {
     height: 2px;
     background-color: rgb(44, 38, 38);
     transition: all 0.5s;
-    border-radius: 4px
+    border-radius: 4px;
   }
 
   span:nth-child(1) {
@@ -124,7 +127,7 @@ nav {
   display: inline-block;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
+  // background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
   position: relative;
   user-select: none;
 
@@ -169,7 +172,7 @@ nav {
 .main {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
+  // background: linear-gradient(rgb(251, 251, 251), rgb(216, 253, 216));
 
   .title {
     font-size: 4vh;
