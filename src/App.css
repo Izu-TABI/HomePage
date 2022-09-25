@@ -229,4 +229,9 @@ nav .inner ul li a:hover {
 .works-main .work-block {
   margin-top: 45px;
   padding: 30px;
+  display: flex;
+}
+.works-main .work-block .works-logo {
+  width: 200px;
+  height: 200px;
 }/*# sourceMappingURL=App.css.map */

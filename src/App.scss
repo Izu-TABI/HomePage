@@ -266,5 +266,12 @@ nav {
   .work-block {
     margin-top: 45px; 
     padding: 30px;
+    display: flex;
+    
+    .works-logo {
+      width: 200px;
+      height: 200px;
+
+    }
   }
 }
