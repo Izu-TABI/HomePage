@@ -91,6 +91,7 @@ nav {
 }
 
 .toggle-btn {
+  overflow: hidden;
   display: block;
   position: fixed;
   top: 30px;
@@ -254,6 +255,7 @@ nav {
   }
 
   .works-contents {
+    overflow: hidden;
     display: block;
     position: absolute;
     top: 22vh;
@@ -266,10 +268,29 @@ nav {
   .work-block {
     margin-top: 45px; 
     padding: 30px;
+    position: relative;
+    
+    a {
+      color: black;
+    }
+    .text-area {
+      margin-top: 180px;
+      .title {
+        white-space: nowrap;
+        color:rgb(78, 90, 149);
+        position: absolute;
+        top: 160px;
+      }
+    }
   }
   .works-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+
     width: 150px;
     height: 150px;
-    margin-right: 10px;
   }
 }

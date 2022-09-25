@@ -81,6 +81,7 @@ nav .inner ul li a:hover {
 }
 
 .toggle-btn {
+  overflow: hidden;
   display: block;
   position: fixed;
   top: 30px;
@@ -218,6 +219,7 @@ nav .inner ul li a:hover {
   transform: translateX(-50%);
 }
 .works-main .works-contents {
+  overflow: hidden;
   display: block;
   position: absolute;
   top: 22vh;
@@ -229,9 +231,26 @@ nav .inner ul li a:hover {
 .works-main .work-block {
   margin-top: 45px;
   padding: 30px;
+  position: relative;
+}
+.works-main .work-block a {
+  color: black;
+}
+.works-main .work-block .text-area {
+  margin-top: 180px;
+}
+.works-main .work-block .text-area .title {
+  white-space: nowrap;
+  color: rgb(78, 90, 149);
+  position: absolute;
+  top: 160px;
 }
 .works-main .works-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
   width: 150px;
   height: 150px;
-  margin-right: 10px;
 }/*# sourceMappingURL=App.css.map */
