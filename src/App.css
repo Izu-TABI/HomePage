@@ -183,7 +183,8 @@ nav .inner ul li a:hover {
   position: absolute;
   top: 25vh;
   left: 50%;
-  width: 70%;
+  width: 75%;
+  max-width: 800px;
   transform: translateX(-50%);
 }
 .main .contents .block-txt {
@@ -221,9 +222,11 @@ nav .inner ul li a:hover {
   position: absolute;
   top: 22vh;
   left: 50%;
-  width: 60vw;
+  width: 85%;
+  max-width: 740px;
   transform: translateX(-50%);
 }
 .works-main .work-block {
   margin-top: 45px;
+  padding: 30px;
 }/*# sourceMappingURL=App.css.map */
