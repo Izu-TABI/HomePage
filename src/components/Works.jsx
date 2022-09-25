@@ -49,7 +49,7 @@ function Works() {
                         の期間限定価格の商品をスクレイピングで取得し、csvファイルに書き出す。
                     </p>
                 </div>
-                <div className="SpeakClock">
+                <div className="work-block">
                     <img className="works-logo" src={SpeakClock} alt="logo" />                    
                     <a href="https://github.com/Izu-TABI/speak_clock">speak clock</a>
                     <p>JavaScript<br/>
