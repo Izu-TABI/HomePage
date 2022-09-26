@@ -5,21 +5,23 @@ import Works from './components/Works';
 import Activities from './components/Activities';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-
 function App() {
+
   return (
-    <Router>
-      <div className="contaier">
-        <div className="main">
-          <Routes>
-              <Route path="/" element={<Home />}/>
-              <Route path="/likes" element={<Likes />}/>
-              <Route path="/works" element={<Works />}/>
-              <Route path="/activities" element={<Activities />}/>
-          </Routes>
+    <div>   
+      <Router>
+        <div className="contaier">
+          <div className="main">
+            <Routes>
+                <Route path="/" element={<Home />}/>
+                <Route path="/likes" element={<Likes />}/>
+                <Route path="/works" element={<Works />}/>
+                <Route path="/activities" element={<Activities />}/>
+            </Routes>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
