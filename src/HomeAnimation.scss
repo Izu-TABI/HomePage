@@ -1,0 +1,24 @@
+.home-sns-icon-area {
+    
+    .sns-icon {
+        a img {
+            animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+            overflow: hidden;
+        }
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(180px);
+        opacity: 0;
+    }
+
+    100% {
+        tramsform: translateY(0);
+    }
+
+    40%, 100% {
+        opacity: 1;
+    }
+}

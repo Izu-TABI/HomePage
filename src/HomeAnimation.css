@@ -1,0 +1,31 @@
+.home-sns-icon-area .sns-icon a img {
+  -webkit-animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+          animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+  overflow: hidden;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateY(180px);
+    opacity: 0;
+  }
+  100% {
+    tramsform: translateY(0);
+  }
+  40%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(180px);
+    opacity: 0;
+  }
+  100% {
+    tramsform: translateY(0);
+  }
+  40%, 100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=HomeAnimation.css.map */

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../HomeAnimation.css';
 import GithubIcon from '../sns_icons_image/GitHub.png';
 import instaIcon from '../sns_icons_image/instagram.png';
 import twitterIcon from '../sns_icons_image/Twitter.png';
