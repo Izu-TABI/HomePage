@@ -17,29 +17,34 @@ p {
 
 nav {
   display: block;
-  width: 220px;
+  width: 100%;
   position: fixed;
   background-color: #ffffff;
-  top: 0;
-  left: -300px;
+  top: -30vw;
   bottom: 0;
   transition: all 0.5s;
-  z-index: 3;
+  z-index: -1;
   opacity: 0;
 }
 nav .inner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 25px;
 }
 nav .inner ul {
+  text-align: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 nav .inner ul li {
   margin: 0;
-  border-bottom: 1px solid #333;
+  margin-top: 10px;
 }
 nav .inner ul li a {
+  border-bottom: 1px solid #333;
+  width: 30vw;
   text-decoration: none;
   color: #333;
   display: block;
@@ -59,7 +64,8 @@ nav .inner ul li a:hover {
 .open nav {
   box-shadow: 2px 3px 4px rgb(138, 137, 137);
   opacity: 1;
-  left: 0;
+  top: 0;
+  z-index: 3;
 }
 .open #mask {
   display: block;
