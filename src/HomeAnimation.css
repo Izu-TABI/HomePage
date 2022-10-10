@@ -2,6 +2,7 @@
   overflow: hidden;
 }
 .home-sns-icon-area .sns-icon {
+  height: 100px;
   opacity: 0;
   -webkit-animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
           animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
@@ -21,7 +22,7 @@
 
 @-webkit-keyframes slideIn {
   0% {
-    transform: translateY(180px);
+    transform: translateY(100px);
     opacity: 0;
   }
   100% {
@@ -34,7 +35,7 @@
 
 @keyframes slideIn {
   0% {
-    transform: translateY(180px);
+    transform: translateY(100px);
     opacity: 0;
   }
   100% {
