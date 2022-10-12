@@ -4,8 +4,8 @@
 .home-sns-icon-area .sns-icon {
   height: 100px;
   opacity: 0;
-  -webkit-animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-          animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+  -webkit-animation: slideInY 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+          animation: slideInY 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
 }
 .home-sns-icon-area .sns-icon:nth-child(2) {
   -webkit-animation-delay: 0.2s;
@@ -20,7 +20,7 @@
           animation-delay: 0.6s;
 }
 
-@-webkit-keyframes slideIn {
+@-webkit-keyframes slideInY {
   0% {
     transform: translateY(100px);
     opacity: 0;
@@ -33,7 +33,7 @@
   }
 }
 
-@keyframes slideIn {
+@keyframes slideInY {
   0% {
     transform: translateY(100px);
     opacity: 0;

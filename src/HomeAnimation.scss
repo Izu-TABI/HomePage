@@ -3,7 +3,7 @@
     .sns-icon {
         height: 100px;
         opacity: 0;
-        animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+        animation: slideInY 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
         &:nth-child(2) {
             animation-delay: 0.2s;
         }
@@ -16,7 +16,7 @@
     }
 }
 
-@keyframes slideIn {
+@keyframes slideInY {
     0% {
         transform: translateY(100px);
         opacity: 0;
