@@ -41,6 +41,7 @@ nav {
         margin: 0;
         margin-top: 7vh;
         a {
+          letter-spacing: 0.1rem;
           width: 130px;
           border-bottom: 1px solid #333;
           text-decoration: none;
@@ -160,6 +161,7 @@ nav {
     white-space: nowrap;
     color: rgb(0, 0, 0);
     font-size: 7vh;
+    letter-spacing: 0.07rem;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -201,7 +203,7 @@ nav {
 
   .title {
     font-size: 4vh;
-
+    letter-spacing: 0.07rem;
     position: absolute;
     left: 50%;
     top: 14%;
@@ -268,7 +270,7 @@ nav {
 .works-main {
   .works-title {
     font-size: 4vh;
-
+    letter-spacing: 0.07rem;
     position: absolute;
     left: 50%;
     top: 14%;
@@ -311,7 +313,6 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     justify-content: center;
-
     width: 150px;
     height: 150px;
   }
