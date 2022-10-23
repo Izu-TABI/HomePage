@@ -154,7 +154,7 @@ nav .inner ul li a:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .home-main-title {
   white-space: nowrap;
