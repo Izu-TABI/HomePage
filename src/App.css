@@ -168,6 +168,39 @@ nav .inner ul li a:hover {
   -webkit-transform: translateY(-50%) translateX(-50%);
 }
 .home-main .home-sns-icon-area {
+  overflow: hidden;
+}
+.home-main .home-sns-icon-area .sns-icon {
+  height: 100px;
+  opacity: 0;
+  -webkit-animation: slideInY 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+          animation: slideInY 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+@-webkit-keyframes slideInY {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    tramsform: translateY(0);
+  }
+  40%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes slideInY {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    tramsform: translateY(0);
+  }
+  40%, 100% {
+    opacity: 1;
+  }
+}
+.home-main .home-sns-icon-area {
   position: absolute;
   bottom: 0;
   left: 50%;
