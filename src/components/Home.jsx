@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className='home-main'>
         <Hamburger />
-        <h1 className='home-main-title'>Izu</h1>
+        <h1 className='home-main-title'>Izu-TABI</h1>
         <ul className='home-sns-icon-area'>
             <li className='sns-icon'><a href="https://github.com/Izu-TABI"><img src={GithubIcon} alt="" /></a></li>
             <li className='sns-icon'><a href="https://twitter.com/chicken_dehanai"><img src={twitterIcon} alt="" /></a></li>
