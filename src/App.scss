@@ -330,22 +330,27 @@ nav {
       color: black;
     }
     .text-area {
-      margin-top: 180px;
+      
+      margin-top: 60px;
       .title {
         white-space: nowrap;
         color:rgb(78, 90, 149);
-        position: absolute;
-        top: 160px;
       }
     }
   }
-  .works-logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    width: 150px;
-    height: 150px;
-  }
+    .works-logo {
+      height: 150px;
+      width: 150px;
+    }
+
+    
+    .work-title {
+      margin-top: 20px;
+      position: absolute;
+      top: 180px;
+      left: 30px;
+      
+      font-size: 30px;
+    }
+
 }
