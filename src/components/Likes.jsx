@@ -18,7 +18,7 @@ function Likes() {
                     <li>Computer</li>
                     <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript</a></li>
                     <li>Web</li>
-                    <li><a href="https://www.realforce.co.jp/">RealForce</a></li>
+                    <li><a href="https://www.realforce.co.jp/">REALFORCE</a></li>
                     <li>Anime</li>
                     <li><a href="https://www.bumpofchicken.com/">BUMP OF CHICKEN</a></li>
                 </ul>
