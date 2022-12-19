@@ -14,7 +14,7 @@ function Home() {
         <ul className='home-sns-icon-area'>
             <li className='sns-icon'><a href="https://github.com/Izu-TABI"><img src={GithubIcon} alt="" /></a></li>
             <li className='sns-icon'><a href="https://twitter.com/chicken_dehanai"><img src={twitterIcon} alt="" /></a></li>
-            <li className='sns-icon'><a href="https://www.instagram.com/i.masaki14/"><img src={instaIcon} alt="" /></a></li>
+            <li className='sns-icon'><a href=""><img src={instaIcon} alt="" /></a></li>
             <li className='sns-icon'><a href="https://izu-tabi.hatenablog.com/"><img src={blogIcon} alt="" /></a></li>
         </ul>
     </div>
