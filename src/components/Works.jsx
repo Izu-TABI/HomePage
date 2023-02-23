@@ -5,6 +5,8 @@ import Weather from '../works_images/weather.png';
 import Classicgames from '../works_images/classicgames.png';
 import Scraping from '../works_images/webscraping.png';
 import SpeakClock from '../works_images/speakclock.png';
+import Focus from '../works_images/focus_icon.png'
+import Connect2 from '../works_images/connect.png'
 
 function Works() {
   return (
@@ -18,6 +20,36 @@ function Works() {
             <div className="works-contents">
                 <div className="work-block">
                     
+                    <img className="works-logo" src={Focus} alt="logo" />
+                    <a className="work-title" href="https://github.com/Izu-TABI/Focus">Focus</a>
+
+                    <div className="text-area">
+                        <small>言語など: HTML SCSS React Node.js Firebase Python</small>
+                        <p>
+                            勉強時間を記録します。<br/>
+                            Discordと連携し、効率的な学習環境を整えます。
+                        </p>
+                        <a href="https://focus-f0429.web.app/">🔗Link</a>
+                     </div>
+
+                </div>
+            <div className="work-block">
+                    
+                    <img className="works-logo" src={Connect2} alt="logo" />
+                    <a className="work-title" href="https://github.com/Izu-TABI/Connect2">Connect2</a>
+
+                    <div className="text-area">
+                        <small>言語など: Node.js</small>
+                        <p>
+                            Discordのbotでボイスチャンネルの入退出を音声で知らせます。<br/>
+                            Log2の改良。
+                        </p>
+                     </div>
+
+            </div>
+
+                <div className="work-block">
+                    
                     <img className="works-logo" src={Log} alt="logo" />
                     <a className="work-title" href="https://github.com/Izu-TABI/discord_bot_Log">Log</a>
 
@@ -25,7 +57,7 @@ function Works() {
                         <small>言語など: Node.js</small>
                         <p>
                             Discordのbotでボイスチャンネルの入退出を記録するのが主な機能。<br/>
-                            他にもボイスチャンネルに誰も参加してない場合メンションする機能などがある。
+                            他にもボイスチャンネルに誰も参加してない場合メンションする機能などがあります。
                         </p>
                      </div>
 
@@ -60,7 +92,7 @@ function Works() {
                     <a className="work-title" href="https://github.com/Izu-TABI/bookwalker_scraping">web scraping</a>
                         <small>言語など: Python</small>
                         <p>
-                            BOOKWALKERの期間限定価格の商品をスクレイピングで取得し、csvファイルに書き出す。
+                            BOOKWALKERの期間限定価格の商品をスクレイピングで取得し、csvファイルに書き出します。
                         </p>
                     </div>
                 </div>

@@ -91,10 +91,8 @@ nav .inner ul li a:hover {
 
 .toggle-btn {
   opacity: 0;
-  -webkit-animation: slideInX 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-          animation: slideInX 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation: slideInX 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+  animation-delay: 0.5s;
   overflow: hidden;
   display: block;
   position: fixed;
@@ -104,16 +102,6 @@ nav .inner ul li a:hover {
   height: 30px;
   z-index: 3;
   cursor: pointer;
-}
-@-webkit-keyframes slideInX {
-  0% {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
 }
 @keyframes slideInX {
   0% {
@@ -152,7 +140,6 @@ nav .inner ul li a:hover {
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   overflow: hidden;
 }
@@ -173,20 +160,7 @@ nav .inner ul li a:hover {
 .home-main .home-sns-icon-area .sns-icon {
   height: 100px;
   opacity: 0;
-  -webkit-animation: slideInY 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-          animation: slideInY 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-}
-@-webkit-keyframes slideInY {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    tramsform: translateY(0);
-  }
-  40%, 100% {
-    opacity: 1;
-  }
+  animation: slideInY 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
 }
 @keyframes slideInY {
   0% {

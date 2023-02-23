@@ -11,7 +11,7 @@ function Likes() {
                     Likes
             </h2>
 
-            <div className="contents">
+            <div className="contents" style={{display:'flex', justifyContent: 'center'}}>
 
                 <ul className="likes-list">
                     <li><a href="https://www.apple.com/">Apple</a></li>
