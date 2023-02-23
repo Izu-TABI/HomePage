@@ -11,7 +11,7 @@ import Connect2 from '../works_images/connect.png'
 function Works() {
   return (
     <div>
-        <div className="works-main">
+        <div className="works-main" >
             <Hamburger />
             <h2 className="works-title">
                     Works
@@ -96,7 +96,7 @@ function Works() {
                         </p>
                     </div>
                 </div>
-                <div className="work-block">
+                <div className="work-block" style={{marginBottom:'50px'}}>
                     <img className="works-logo" src={SpeakClock} alt="logo" />                    
                     <div className="text-area">
                         <a className="work-title" href="https://github.com/Izu-TABI/speak_clock">speak clock</a>
@@ -107,7 +107,12 @@ function Works() {
                         </p>
                     </div>
                 </div>
+
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <small style={{color: 'gray', fontSize: '5px', position: 'absolute', bottom: '0', marginBottom: '4px'}}>Copyright © 2023 Izu-TABI All rights reserved.</small>
+                </div>
             </div>
+
         </div>
     </div>
   )

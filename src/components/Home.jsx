@@ -8,9 +8,12 @@ import Hamburger from './Hamburger';
   
 function Home() {
   return (
-    <div className='home-main'>
+    <div className='home-main' style={{position: 'relative'}}>
         <Hamburger />
         <h1 className='home-main-title'>Izu-TABI</h1>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <small style={{color: 'gray', fontSize: '5px', position: 'absolute', bottom: '0', marginBottom: '4px'}}>Copyright © 2023 Izu-TABI All rights reserved.</small>
+        </div>
     </div>
   )
 }
