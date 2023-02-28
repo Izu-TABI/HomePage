@@ -109,7 +109,7 @@ function Works() {
                 </div>
 
                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                    <small style={{color: 'gray', fontSize: '5px', position: 'absolute', bottom: '0', marginBottom: '4px'}}>Copyright © 2023 Izu-TABI All rights reserved.</small>
+
                 </div>
             </div>
 

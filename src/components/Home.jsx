@@ -12,7 +12,7 @@ function Home() {
         <Hamburger />
         <h1 className='home-main-title'>Izu-TABI</h1>
         <div style={{display: 'flex', justifyContent: 'center'}}>
-          <small style={{color: 'gray', fontSize: '5px', position: 'absolute', bottom: '0', marginBottom: '4px'}}>Copyright © 2023 Izu-TABI All rights reserved.</small>
+        <small style={{color: 'gray', fontSize: '10px', position: 'absolute', bottom: '0', marginBottom: '6px'}}>Copyright © 2023 Izu-TABI All rights reserved.</small>
         </div>
     </div>
   )

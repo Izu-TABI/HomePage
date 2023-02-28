@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: auto;
   overflow-x: hidden;
 }
 *::before {
@@ -11,6 +10,7 @@
 }
 
 p {
+  color: #555555;
   margin: 0;
   padding: 0;
 }
@@ -141,7 +141,6 @@ nav .inner ul li a:hover {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  overflow: hidden;
 }
 .home-main-title {
   white-space: nowrap;
@@ -194,6 +193,7 @@ nav .inner ul li a:hover {
 }
 
 .main {
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
 }

@@ -6,11 +6,12 @@
     padding: 0;
     outline: none;
   }
-  overflow: auto;
   overflow-x: hidden;
 }
 
 p {
+  color: #555555;
+  
   margin: 0;
   padding: 0;
 }
@@ -154,8 +155,6 @@ nav {
   // background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
   position: relative;
   user-select: none;
-  overflow: hidden;
-
   &-title { 
     white-space: nowrap;
     color: rgb(0, 0, 0);
@@ -228,6 +227,8 @@ nav {
 // components
 
 .main {
+  overflow: hidden;
+
   width: 100vw;
   height: 100vh;
 
