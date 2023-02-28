@@ -152,16 +152,24 @@ nav {
   display: inline-block;
   width: 100vw;
   height: 100vh;
-  // background: linear-gradient(rgb(253, 253, 222), rgb(191, 251, 191));
   position: relative;
   user-select: none;
   &-title { 
+    position: absolute;
+
     white-space: nowrap;
     color: rgb(0, 0, 0);
     font-size: 7vh;
     letter-spacing: 0.07rem;
-    position: absolute;
-    top: 45%;
+    top: 50%;
+    left: 50%;
+
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+  }
+
+  small {
+    
     left: 50%;
 
     transform: translateY(-50%) translateX(-50%);

@@ -143,12 +143,17 @@ nav .inner ul li a:hover {
           user-select: none;
 }
 .home-main-title {
+  position: absolute;
   white-space: nowrap;
   color: rgb(0, 0, 0);
   font-size: 7vh;
   letter-spacing: 0.07rem;
-  position: absolute;
-  top: 45%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+.home-main small {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
