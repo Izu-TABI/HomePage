@@ -154,6 +154,7 @@ nav .inner ul li a:hover {
   -webkit-transform: translateY(-50%) translateX(-50%);
 }
 .home-main small {
+  white-space: nowrap;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
