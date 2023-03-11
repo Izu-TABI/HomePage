@@ -21,7 +21,7 @@ function Works() {
                 <div className="work-block">
                     
                     <img className="works-logo" src={Focus} alt="logo" />
-                    <a className="work-title" href="https://github.com/Izu-TABI/Focus">Focus</a>
+                    <a className="work-title" href="https://izu-focus.web.app/">Focus</a>
 
                     <div className="text-area">
                         <small>言語など: HTML SCSS React Node.js Firebase Python</small>
