@@ -21,7 +21,7 @@ function Works() {
                 <div className="work-block">
                     
                     <img className="works-logo" src={Focus} alt="logo" />
-                    <a className="work-title" href="https://izu-focus.web.app/">Focus</a>
+                    <a className="work-title" href="https://github.com/Izu-TABI/Focus">Focus</a>
 
                     <div className="text-area">
                         <small>言語など: HTML SCSS React Node.js Firebase Python</small>
@@ -29,7 +29,7 @@ function Works() {
                             勉強時間を記録します。<br/>
                             Discordと連携し、効率的な学習環境を整えます。
                         </p>
-                        <a href="https://focus-f0429.web.app/">🔗Link</a>
+                        <a href="https://izu-focus.web.app/">🔗Link</a>
                      </div>
 
                 </div>
