@@ -58,6 +58,17 @@ function Activities() {
                         </p>
                         <div className="block-txt"></div>
                     </div>
+                    <div className="block-txt">
+                        <div className="block-date">
+                            <p>
+                                <span className="date">2023.3</span>
+                            </p>
+                        </div>
+                        <p className="tit">
+                            第30回コンピュータフェスティバル
+                        </p>
+                        <div className="block-txt"></div>
+                    </div>
                 </div>
                 <div style={{display: 'flex', justifyContent: 'center'}}>
 
