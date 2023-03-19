@@ -65,7 +65,7 @@ function Activities() {
                             </p>
                         </div>
                         <p className="tit">
-                            第30回コンピュータフェスティバル
+				中国地区高専コンピュータフェスティバル - アプリケーション部門 
                         </p>
                         <div className="block-txt"></div>
                     </div>
