@@ -70,8 +70,19 @@ function Activities() {
                         <div className="block-txt"></div>
                     </div>
                 </div>
+    
+                    <div className="block-txt">
+                        <div className="block-date">
+                            <p>
+                                <span className="date">2022.10</span>
+                            </p>
+                        </div>
+                        <p className="tit">
+                            技育祭2022【春】
+                        </p>
+                        <div className="block-txt"></div>
+                    </div>
                 <div style={{display: 'flex', justifyContent: 'center'}}>
-
                 </div>
             </div>
         </div>
