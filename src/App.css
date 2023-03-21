@@ -138,9 +138,7 @@ nav .inner ul li a:hover {
   width: 100vw;
   height: 100vh;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .home-main-title {
   position: absolute;
@@ -237,6 +235,9 @@ nav .inner ul li a:hover {
   max-width: 800px;
   transform: translateX(-50%);
 }
+.main .contents .final-contents {
+  margin-bottom: 100px;
+}
 .main .contents .block-txt {
   margin-top: 30px;
   position: relative;
@@ -303,4 +304,6 @@ nav .inner ul li a:hover {
   top: 180px;
   left: 30px;
   font-size: 30px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+/*# sourceMappingURL=App.css.map */

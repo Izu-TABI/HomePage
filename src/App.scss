@@ -121,7 +121,7 @@ nav {
         transform: translateX(0px);
         opacity: 1;
     }
-}
+  }
   cursor: pointer;
   span {
     position: absolute;
@@ -275,6 +275,11 @@ nav {
       width: 75%;
       max-width: 800px;
       transform: translateX(-50%);
+    }
+    
+    .final-contents {
+      margin-bottom: 100px;
+
     }
 
     .block-txt {
