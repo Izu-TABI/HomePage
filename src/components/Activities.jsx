@@ -76,7 +76,7 @@ function Activities() {
                             <p>
                                 <span className="date">2022.10</span>
                             </p>
-                        </div>
+                        </div
                         <p className="tit">
                             技育祭2022【春】
                         </p>
