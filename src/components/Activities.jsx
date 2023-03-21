@@ -16,8 +16,7 @@ function Activities() {
                         <div className="block-date">
                             <p>
                                 <span className="date">2022.3</span>
-                            </p>
-                        </div>
+                            </p> </div>
                         <p className="tit">
                             中国地区高専コンピュータフェスティバル - ゲーム部門
                         </p>
@@ -47,6 +46,7 @@ function Activities() {
                         </p>
                         <div className="block-txt"></div>
                     </div>
+
                     <div className="block-txt">
                         <div className="block-date">
                             <p>
@@ -58,6 +58,7 @@ function Activities() {
                         </p>
                         <div className="block-txt"></div>
                     </div>
+
                     <div className="block-txt">
                         <div className="block-date">
                             <p>
@@ -65,25 +66,24 @@ function Activities() {
                             </p>
                         </div>
                         <p className="tit">
-				中国地区高専コンピュータフェスティバル - アプリケーション部門 
+                  				中国地区高専コンピュータフェスティバル - アプリケーション部門 
                         </p>
                         <div className="block-txt"></div>
                     </div>
-                </div>
-    
-                    <div className="block-txt">
+
+                  <div className="block-txt final-contents">
                         <div className="block-date">
                             <p>
-                                <span className="date">2022.10</span>
+                                <span className="date">2023.3</span>
                             </p>
-                        </div
+                        </div>
                         <p className="tit">
-                            技育祭2022【春】
                         </p>
+                          技育祭2023【春】
                         <div className="block-txt"></div>
                     </div>
-                <div style={{display: 'flex', justifyContent: 'center'}}>
-                </div>
+                  </div>
+
             </div>
         </div>
     </>
