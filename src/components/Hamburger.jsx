@@ -23,13 +23,19 @@ function Hamburger() {
             <li><a href="/works">Works</a></li>
             <li><a href="/activities">Activities</a></li>
           </ul>
+          <div className='links'>
+            <span>Link to </span>
+            <a href="https://github.com/Izu-TABI">GitHub</a>
+          </div>
         </div>
+
       </nav>
 
+
       <div className="toggle-btn" onClick={addClass}>
-          <span></span>
-          <span></span>
-          <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
       <div id="mask" onClick={maskClick}></div>
