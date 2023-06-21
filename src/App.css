@@ -68,6 +68,9 @@ nav .links {
   font-size: 20px;
   color: #555555;
 }
+nav .links a {
+  color: black;
+}
 nav .links span {
   display: block;
   font-size: 22px;
