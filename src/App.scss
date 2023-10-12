@@ -100,10 +100,6 @@ nav {
 
 // nav
 
-#mask {
-  display: none;
-  transition: all 0.5s;
-}
 
 .open {
   nav {
@@ -111,16 +107,6 @@ nav {
     opacity: 1;
     top: 0;
     z-index: 3;
-  }
-
-  #mask {
-    display: block;
-    background-color: rgb(229, 229, 229);
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: fixed;
   }
 
 

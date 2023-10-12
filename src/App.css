@@ -78,25 +78,11 @@ nav .links span {
   margin-bottom: 20px;
 }
 
-#mask {
-  display: none;
-  transition: all 0.5s;
-}
-
 .open nav {
   box-shadow: 2px 3px 4px rgb(138, 137, 137);
   opacity: 1;
   top: 0;
   z-index: 3;
-}
-.open #mask {
-  display: block;
-  background-color: rgb(229, 229, 229);
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  position: fixed;
 }
 .open .toggle-btn span:nth-child(1) {
   transform: translateY(10px) rotate(-315deg);
