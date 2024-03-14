@@ -71,7 +71,7 @@ function Activities() {
                             <div className="block-txt"></div>
                         </div>
 
-                        <div className="block-txt final-contents">
+                        <div className="block-txt">
                             <div className="block-date">
                                 <p>
                                     <span className="date">2023.3</span>
@@ -79,6 +79,17 @@ function Activities() {
                             </div>
                             <p className="tit">
                                 技育祭2023【春】
+                            </p>
+                            <div className="block-txt"></div>
+                        </div>
+                        <div className="block-txt final-contents">
+                            <div className="block-date">
+                                <p>
+                                    <span className="date">2024.3</span>
+                                </p>
+                            </div>
+                            <p className="tit">
+                                中国地区高専コンピュータフェスティバル - アプリケーション部門 3位√
                             </p>
                             <div className="block-txt"></div>
                         </div>
