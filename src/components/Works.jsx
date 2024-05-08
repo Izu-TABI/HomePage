@@ -8,6 +8,7 @@ import SpeakClock from '../works_images/speakclock.png';
 import Focus from '../works_images/focus_icon.png'
 import Connect2 from '../works_images/connect.png'
 import Loading from './Loading';
+import Honeycomb from '../works_images/honeycomb_logo.png';
 
 function Works() {
     const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +33,20 @@ function Works() {
                 </h2>
 
                 <div className="works-contents">
+                    <div className="work-block">
+
+                        <img className="works-logo" src={Honeycomb} alt="logo" />
+                        <a className="work-title" href="https://honeycombquest.web.app/">Honeycomb Quest</a>
+
+                        <div className="text-area">
+                            <small>言語など: HTML SCSS React Firebase</small>
+                            <p>
+                                ハニカム英文法を用いた英語学習ゲーム<br />
+
+                            </p>
+                        </div>
+
+                    </div>
                     <div className="work-block">
 
                         <img className="works-logo" src={Focus} alt="logo" />

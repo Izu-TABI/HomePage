@@ -338,7 +338,8 @@ nav .links span {
 }
 .works-main .works-logo {
   height: 150px;
-  width: 150px;
+  width: auto;
+  background-color: #333;
 }
 .works-main .work-title {
   margin-top: 20px;
