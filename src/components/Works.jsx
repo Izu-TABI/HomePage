@@ -9,6 +9,7 @@ import Focus from '../works_images/focus_icon.png'
 import Connect2 from '../works_images/connect.png'
 import Loading from './Loading';
 import Honeycomb from '../works_images/honeycomb_logo.png';
+import BallClock from '../works_images/ballclock.png';
 
 function Works() {
     const [isLoading, setIsLoading] = useState(true);
@@ -64,6 +65,21 @@ function Works() {
                     </div>
                     <div className="work-block">
 
+                        <img className="works-logo" src={BallClock} alt="logo" />
+                        <a className="work-title" href="https://github.com/Izu-TABI/BallClock">Ball Clock</a>
+
+                        <div className="text-area">
+                            <small>言語など: JavaScript HTML/CSS Three.js</small>
+                            <p>
+                                時計アプリ<br />
+                                マウスをうごかすとボールも動く。
+                            </p>
+                            <a href="https://izu-tabi.github.io/BallClock/">🔗Link</a>
+                        </div>
+
+                    </div>
+                    <div className="work-block">
+
                         <img className="works-logo" src={Connect2} alt="logo" />
                         <a className="work-title" href="https://github.com/Izu-TABI/Connect2">Connect2</a>
 
@@ -76,6 +92,7 @@ function Works() {
                         </div>
 
                     </div>
+
 
                     <div className="work-block">
 
