@@ -148,7 +148,7 @@ function Works() {
                             <a className="work-title" href="https://github.com/Izu-TABI/speak_clock">speak clock</a>
                             <small>言語など: JavaScript</small>
                             <p>
-                                時刻を取得して読み上げるというもの。ネタです。<br />
+                                時刻を取得して読み上げる。<br />
                                 <a href="https://izu-tabi.github.io/speak_clock/">🔗Link</a>
                             </p>
                         </div>

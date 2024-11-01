@@ -50,18 +50,6 @@ function Activities() {
                         <div className="block-txt">
                             <div className="block-date">
                                 <p>
-                                    <span className="date">2022.10</span>
-                                </p>
-                            </div>
-                            <p className="tit">
-                                技育祭2022【秋】
-                            </p>
-                            <div className="block-txt"></div>
-                        </div>
-
-                        <div className="block-txt">
-                            <div className="block-date">
-                                <p>
                                     <span className="date">2023.3</span>
                                 </p>
                             </div>
@@ -74,14 +62,15 @@ function Activities() {
                         <div className="block-txt">
                             <div className="block-date">
                                 <p>
-                                    <span className="date">2023.3</span>
+                                    <span className="date">2023.6</span>
                                 </p>
                             </div>
                             <p className="tit">
-                                技育祭2023【春】
+                                第34回全国高等専門学校 プログラミングコンテスト - 自由部門
                             </p>
                             <div className="block-txt"></div>
                         </div>
+
                         <div className="block-txt final-contents">
                             <div className="block-date">
                                 <p>
