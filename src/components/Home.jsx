@@ -69,8 +69,6 @@ function Home() {
   const phrases = [
     'Hello,',
     'Welcome to My Homepage',
-    'Welcome to Yayoi Festival',
-    'Have fun!',
     'Izu-TABI',
     ''
   ]
