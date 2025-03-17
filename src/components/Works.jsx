@@ -43,7 +43,7 @@ function Works() {
                             <small>言語など: HTML SCSS React Firebase</small>
                             <p>
                                 ハニカム英文法を用いた英語学習ゲーム<br />
-
+                                <a href="https://www.tsuyama-ct.ac.jp/images/kyousyokuin/kiyou/kenkyuuhoukoku2024k02.pdf">研究報告書</a>
                             </p>
                         </div>
 
