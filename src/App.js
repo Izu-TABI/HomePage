@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Loading from './components/Loading';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,6 +25,7 @@ function App() {
   }
   return (
     <>
+      <Analytics />
       <Router>
         <div className="contaier">
           <div className="main">
