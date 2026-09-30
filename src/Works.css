@@ -1,0 +1,100 @@
+.main .contents .works-list {
+  display: block;
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+  width: 75%;
+  max-width: 800px;
+  padding-bottom: 100px;
+  transform: translateX(-50%);
+}
+.main .contents .works-section .works-heading {
+  margin-top: 150px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  color: rgb(44, 38, 38);
+}
+.main .contents .works-section:first-child .works-heading {
+  margin-top: 50px;
+}
+.main .contents .work-item {
+  margin-top: 40px;
+  position: relative;
+}
+.main .contents .work-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(122, 122, 122);
+  font-size: 0.9rem;
+}
+.main .contents .work-meta::after {
+  content: "";
+  flex: 1 0 24px;
+  height: 1px;
+  background-color: rgb(159, 159, 159);
+}
+.main .contents .work-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 20px;
+}
+.main .contents .work-thumb {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+.main .contents .work-text {
+  flex: 1;
+  min-width: 0;
+}
+.main .contents .work-name {
+  color: rgb(40, 39, 39);
+}
+.main .contents .work-desc {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgb(110, 110, 110);
+}
+.main .contents .work-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3em 1.2em;
+  margin-top: 6px;
+  padding-bottom: 2px;
+  overflow: visible;
+  font-size: 0.85rem;
+}
+.main .contents .work-links a {
+  overflow: visible;
+  color: #515151;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.main .contents .work-links a:hover {
+  color: rgb(78, 90, 149);
+}
+
+@media (max-width: 480px) {
+  .main .contents .works-list {
+    width: 88%;
+  }
+  .main .contents .work-body {
+    gap: 12px;
+  }
+  .main .contents .work-thumb {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+  }
+}/*# sourceMappingURL=Works.css.map */
