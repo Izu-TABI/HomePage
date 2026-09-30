@@ -207,16 +207,83 @@ nav {
     justify-content: center;
     align-items: center;
     display: flex;
+
+    flex-direction: column;
   }
 
   #text {
     font-family: 'Roboto Mono', monospace;
     font-weight: 100;
-    font-size: 5vh;
+    font-size: 2.8em;
     color: #515151;
     letter-spacing: 0.1em;  
+
+    // 文字が空のときも高さを確保して、下の自己紹介がガタつかないようにする
+    min-height: 1.4em;
   }
-  
+
+  .profile {
+    margin-top: 8vh;
+    text-align: center;
+    opacity: 0;
+    animation: profileFadeIn 0.8s ease-out 0.5s forwards;
+
+    .profile-affiliation {
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: #515151;
+    }
+
+    .profile-lead {
+      margin-top: 0.8em;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #757575;
+
+      // スマホで折り返すときに、文の区切りで改行されるようにする
+      span {
+        display: block;
+
+      }
+    }
+
+    .profile-links {
+      margin-top: 3vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8em 2em;
+
+      a {
+        padding-bottom: 2px;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        color: #515151;
+        border-bottom: 1px solid #b0b0b0;
+        transition: color 0.2s, border-color 0.2s;
+
+        &:hover {
+          color: rgb(78, 90, 149);
+          border-color: rgb(78, 90, 149);
+        }
+      }
+    }
+
+
+    
+    @keyframes profileFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  }
   .dud {
     color: #757575;
   }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../HomeAnimation.css';
 import Hamburger from './Hamburger';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [Loading, setLoading] = useState(true);
@@ -67,9 +68,8 @@ function Home() {
   // ——————————————————————————————————————————————————
 
   const phrases = [
-    'Hello,',
-    'Welcome to My Homepage',
-    'Izumoi',
+    "Hello,",
+    "Izumoi",
     ''
   ]
 
@@ -99,13 +99,23 @@ function Home() {
 
 
 
-
   return (
     <div className='home-main' style={{ position: 'relative' }}>
       <Hamburger />
       {/* <h1 className='home-main-title'>Izu-TABI</h1> */}
       <div className="container">
         <div id="text"></div>
+
+        <div className="profile">
+            <p className="profile-affiliation">Informatics and Data Science, Hiroshima University</p>
+            <p className="profile-lead">
+            </p>
+            <div className="profile-links">
+              <Link to="/career">Career</Link>
+              <Link to="/works">Works</Link>
+              <a href="https://github.com/Izu-TABI" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+        </div>
       </div>
       <small style={{ color: 'gray', fontSize: '10px', position: 'absolute', bottom: '0', marginBottom: '20px' }}>Copyright © 2026 Izumoi All rights reserved.</small>
     </div>
