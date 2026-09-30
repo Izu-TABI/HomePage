@@ -19,7 +19,7 @@ import RyoWeb from '../works_images/ryo-web.png'
 // links: 下に並ぶリンク（label と url）
 const sections = [
     {
-        heading: 'Web application & Web site',
+        heading: 'Web',
         items: [
             {
                 name: 'Honeycomb Quest',
