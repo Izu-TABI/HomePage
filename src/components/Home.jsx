@@ -69,7 +69,7 @@ function Home() {
   const phrases = [
     'Hello,',
     'Welcome to My Homepage',
-    'Izu-TABI',
+    'Izumoi',
     ''
   ]
 
@@ -107,7 +107,7 @@ function Home() {
       <div className="container">
         <div id="text"></div>
       </div>
-      <small style={{ color: 'gray', fontSize: '10px', position: 'absolute', bottom: '0', marginBottom: '20px' }}>Copyright © 2023 Izu-TABI All rights reserved.</small>
+      <small style={{ color: 'gray', fontSize: '10px', position: 'absolute', bottom: '0', marginBottom: '20px' }}>Copyright © 2026 Izumoi All rights reserved.</small>
     </div>
   )
 }
