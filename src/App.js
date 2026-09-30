@@ -2,7 +2,7 @@ import './App.css';
 import Home from './components/Home';
 import Likes from './components/Likes';
 import Works from './components/Works';
-import Activities from './components/Activities';
+import Career from './components/Career';
 import Contact from './components/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -33,7 +33,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/likes" element={<Likes />} />
               <Route path="/works" element={<Works />} />
-              <Route path="/activities" element={<Activities />} />
+              <Route path="/career" element={<Career />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div >

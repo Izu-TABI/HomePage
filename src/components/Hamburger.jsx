@@ -21,7 +21,7 @@ function Hamburger() {
             <li><a href="/">Home</a></li>
             <li><a href="/likes">Likes</a></li>
             <li><a href="/works">Works</a></li>
-            <li><a href="/activities">Activities</a></li>
+            <li><a href="/career">Career</a></li>
           </ul>
           <div className='links'>
             <span>Link to </span>

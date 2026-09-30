@@ -1,6 +1,6 @@
 import React from 'react'
 import Hamburger from './Hamburger'
-import '../Activities.css'
+import '../Career.css'
 
 // award: タイトルの横に強調表示される受賞・表彰
 // desc : タイトルの下に出る一言説明
@@ -55,7 +55,7 @@ const sections = [
     },
 ]
 
-function Activities() {
+function Career() {
     return (
         <>
             <div className="main">
@@ -98,4 +98,4 @@ function Activities() {
     )
 }
 
-export default Activities
+export default Career
