@@ -1,0 +1,50 @@
+.main .contents .block {
+  display: block;
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  width: 75%;
+  max-width: 800px;
+  transform: translateX(-50%);
+}
+.main .contents .final-contents {
+  margin-bottom: 100px;
+}
+.main .contents .career-section .section-heading {
+  margin-top: 90px;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  color: rgb(44, 38, 38);
+  border-bottom: 1px solid rgb(40, 39, 39);
+}
+.main .contents .career-section:first-child .section-heading {
+  margin-top: 0;
+}
+.main .contents .block-txt {
+  margin-top: 30px;
+  position: relative;
+}
+.main .contents .block-txt .block-date {
+  color: rgb(122, 122, 122);
+  font-weight: bold;
+}
+.main .contents .block-txt p.tit {
+  color: rgb(40, 39, 39);
+  margin-top: 9px;
+}
+.main .contents .block-txt p.tit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.main .contents .block-txt p.tit a:hover {
+  color: rgb(78, 90, 149);
+}
+.main .contents .desc {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: rgb(110, 110, 110);
+}/*# sourceMappingURL=Activities.css.map */

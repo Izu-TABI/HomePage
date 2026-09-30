@@ -13,7 +13,7 @@ const Contact = () => {
       <div>
         <div className='account'>
           <img src={mailIcon} alt="" /><br />
-          <a href="mailto:izutabi14@gmail.com">izutabi14@gmail.com</a><br />
+          <a href="mailto:masakisama14@gmail.com">masakisama14@gmail.com</a><br />
         </div>
         <div className='account'>
           <img src={discordIcon} alt="" /><br />

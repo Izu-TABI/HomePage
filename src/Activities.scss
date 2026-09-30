@@ -1,0 +1,85 @@
+.main .contents {
+  .block {
+    display: block;
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    width: 75%;
+    max-width: 800px;
+    transform: translateX(-50%);
+  }
+
+  .final-contents {
+    margin-bottom: 100px;
+  }
+
+  // セクション見出し
+  .career-section {
+    .section-heading {
+      margin-top: 90px;
+      padding: 0;
+      margin-bottom: 0;
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+      color: rgb(44, 38, 38);
+      border-bottom: 1px solid rgb(40, 39, 39);
+    }
+
+    &:first-child .section-heading {
+      margin-top: 0;
+    }
+  }
+
+  // 1項目（日付＋タイトル）
+  .block-txt {
+    margin-top: 30px;
+
+    position: relative;
+
+    .block-date {
+      color: rgb(122, 122, 122);
+      font-weight: bold;
+    }
+
+    p.tit {
+      color: rgb(40, 39, 39);
+      margin-top: 9px;
+
+
+      // 論文タイトルなどのリンク
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+
+        &:hover {
+          color: rgb(78, 90, 149);
+        }
+      }
+    }
+
+    
+    
+  }
+
+  // 日付の右に伸びる線
+  // span.date::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   margin-top: 9px;
+  //   margin-left: 10px;
+  //   width: 80%;
+  //   height: 1px;
+  //   background-color: rgb(225, 225, 225);
+  // }
+
+  // タイトル下の一言説明
+  .desc {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: rgb(110, 110, 110);
+  }
+}

@@ -18,8 +18,6 @@
   text-align: center;
   width: 350px;
   height: 200px;
-  font-size: 20px;
-  color: #3a3a3a;
 }
 .contact-area .account a {
   margin-top: 10px;
@@ -28,4 +26,8 @@
 .contact-area .account img {
   width: 100px;
   height: 100px;
+}
+.contact-area .account {
+  font-size: 20px;
+  color: #3a3a3a;
 }/*# sourceMappingURL=Contact.css.map */

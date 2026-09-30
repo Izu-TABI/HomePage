@@ -344,6 +344,8 @@ nav {
     display: flex;
     justify-content: center;
 
+
+
     .likes-list {
       width: 50%;
       position: absolute;
@@ -358,46 +360,7 @@ nav {
       }
     }
 
-    .block {
-      display: block;
-      position: absolute;
-      top: 25vh;
-      left: 50%;
-      width: 75%;
-      max-width: 800px;
-      transform: translateX(-50%);
-    }
-
-    .final-contents {
-      margin-bottom: 100px;
-
-    }
-
-    .block-txt {
-      margin-top: 30px;
-      position: relative;
-
-      .block-date {
-        color: rgb(122, 122, 122);
-      }
-
-      p.tit {
-        color: rgb(40, 39, 39);
-        margin-top: 9px;
-      }
-    }
-
-    span.date::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin-top: 9px;
-      margin-left: 10px;
-      width: 100vw;
-      height: 1px;
-      background-color: rgb(159, 159, 159);
-    }
+    // 経歴（Activities）ページのスタイルは Activities.scss へ移動
   }
 }
 
