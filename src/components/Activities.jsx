@@ -42,7 +42,7 @@ function Activities() {
                                 </p>
                             </div>
                             <p className="tit">
-                                第22回日本情報オリンピック
+                                第22回日本情報オリンピック - 敢闘賞
                             </p>
                             <div className="block-txt"></div>
                         </div>
@@ -71,7 +71,7 @@ function Activities() {
                             <div className="block-txt"></div>
                         </div>
 
-                        <div className="block-txt final-contents">
+                        <div className="block-txt">
                             <div className="block-date">
                                 <p>
                                     <span className="date">2024.3</span>
@@ -79,6 +79,28 @@ function Activities() {
                             </div>
                             <p className="tit">
                                 中国地区高専コンピュータフェスティバル - アプリケーション部門 3位
+                            </p>
+                            <div className="block-txt"></div>
+                        </div>
+                        <div className="block-txt">
+                            <div className="block-date">
+                                <p>
+                                    <span className="date">2025.3</span>
+                                </p>
+                            </div>
+                            <p className="tit">
+                                中国地区高専コンピュータフェスティバル - 主管校 総責任者
+                            </p>
+                            <div className="block-txt"></div>
+                        </div>
+                        <div className="block-txt final-contents">
+                            <div className="block-date">
+                                <p>
+                                    <span className="date">2026.9</span>
+                                </p>
+                            </div>
+                            <p className="tit">
+                                Micron インターン（広島大学 プロジェクト研究）
                             </p>
                             <div className="block-txt"></div>
                         </div>
