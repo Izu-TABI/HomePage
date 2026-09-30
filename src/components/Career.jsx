@@ -20,7 +20,7 @@ const sections = [
                 date: '2024',
                 title: '全系横断演習Ⅰ・Ⅱにおける英語学習Webゲームおよびカードゲームの開発とその効果検証',
                 link: 'https://www.tsuyama-ct.ac.jp/images/kyousyokuin/kiyou/kenkyuuhoukoku2024k02.pdf',
-                desc: '津山工業高等専門学校紀要（共著）。英語学習ゲーム「Honeycomb Quest」を3名でチーム開発し、高専生140名・中学校教員8名へのアンケートで効果を検証。その後、実際に中学校の英語の授業で使用された。',
+                desc: '津山工業高等専門学校紀要第66号。英語学習ゲーム「Honeycomb Quest」を3名でチーム開発し、高専生140名・中学校教員8名へのアンケートで効果を検証。その後、実際に中学校の英語の授業で使用された。',
             },
         ],
     },
