@@ -2,11 +2,14 @@ import React from 'react';
 import '../Contact.css';
 import mailIcon from '../contact_images/mailIcon.png';
 import discordIcon from '../contact_images/discord.png';
-
+import Hamburger from './Hamburger';
 
 const Contact = () => {
   return (
-    <div className='contact-area'>
+    <div className="main">
+      <Hamburger />
+      <div className='contact-area'>
+      
       <h2>
         Contact
       </h2>
@@ -22,6 +25,9 @@ const Contact = () => {
 
       </div>
     </div>
+    </div>
+    
+    
   )
 }
 
