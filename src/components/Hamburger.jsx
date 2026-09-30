@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Hamburger() {
 
@@ -12,23 +13,28 @@ function Hamburger() {
     nav.classList.toggle("open");
   }
 
-
   return (
     <div id='navArea'>
-      <nav>
-        <div className="inner">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/likes">Likes</a></li>
-            <li><a href="/works">Works</a></li>
-            <li><a href="/career">Career</a></li>
-          </ul>
+      <nav>        
+        <div id='inner'>
           <div className='links'>
-            <span>Link to </span>
+            <Link  to="/">Home</Link>
+          </div>
+          <div className="links">
+            <Link  to="/works">Works</Link>
+          </div>
+          <div className="links">
+            <Link  to="/career">Career</Link>
+          </div>
+          <div className='links'>
             <a href="https://github.com/Izu-TABI">GitHub</a>
           </div>
-        </div>
+          <div className="links">
+            <Link  to="/contact">Contact</Link>
+          </div>
+          
 
+        </div>
       </nav>
 
 
