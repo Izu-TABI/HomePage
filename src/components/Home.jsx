@@ -88,7 +88,7 @@ function Home() {
         return;
       } else {
         fx.setText(phrases[counter]).then(() => {
-          setTimeout(next, 1500)
+          setTimeout(next, 1000)
         })
         counter = (counter + 1) % phrases.length;
       }
