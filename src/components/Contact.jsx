@@ -15,7 +15,7 @@ const Contact = () => {
       </h2>
       <div>
         <div className='account'>
-          <img src={mailIcon} alt="" /><br />
+          <img className="mail-icon" src={mailIcon} alt="" /><br />
           <a href="mailto:masakisama14@gmail.com">masakisama14@gmail.com</a><br />
         </div>
         <div className='account'>

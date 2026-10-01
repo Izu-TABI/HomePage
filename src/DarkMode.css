@@ -1,0 +1,139 @@
+/* ダークモード（OS の設定に合わせて自動で切り替わる）
+   ライトモードのデザインはそのままで、色だけを上書きしている */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #161616;
+    color: #e4e4e4;
+  }
+
+  p {
+    color: #b5b5b5;
+  }
+
+  /* ナビゲーション */
+  nav {
+    background-color: #1e1e1e;
+  }
+
+  nav .links a {
+    color: #c8c8c8;
+  }
+
+  .open nav {
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .toggle-btn span {
+    background-color: #e0e0e0;
+  }
+
+  /* Home */
+  .home-main #text {
+    color: #d6d6d6;
+  }
+
+  .home-main .dud {
+    color: #8a8a8a;
+  }
+
+  .home-main .profile .profile-affiliation {
+    color: #c8c8c8;
+  }
+
+  .home-main .profile .profile-lead {
+    color: #9a9a9a;
+  }
+
+  .home-main .profile .profile-links a {
+    color: #d6d6d6;
+    border-bottom-color: #5a5a5a;
+  }
+
+  .home-main .profile .profile-links a:hover {
+    color: #9aa6e6;
+    border-color: #9aa6e6;
+  }
+
+  /* Likes */
+  .main .contents .likes-list li a {
+    color: #dddddd;
+  }
+
+  /* Career */
+  .main .contents .career-section .section-heading {
+    color: #e0e0e0;
+    border-bottom-color: #8a8a8a;
+  }
+
+  .main .contents .block-txt .block-date {
+    color: #9a9a9a;
+  }
+
+  .main .contents .block-txt p.tit {
+    color: #e0e0e0;
+  }
+
+  .main .contents .block-txt p.tit a:hover {
+    color: #9aa6e6;
+  }
+
+  .main .contents .desc {
+    color: #a0a0a0;
+  }
+
+  /* Works */
+  .main .contents .works-section .works-heading {
+    color: #e0e0e0;
+  }
+
+  .main .contents .work-meta {
+    color: #9a9a9a;
+  }
+
+  .main .contents .work-meta::after {
+    background-color: #555555;
+  }
+
+  /* サムネイルは画像の見え方を変えないよう、背景は明るいまま枠線だけ暗くする */
+  .main .contents .work-thumb {
+    border-color: #3a3a3a;
+  }
+
+  .main .contents .work-name {
+    color: #e0e0e0;
+  }
+
+  .main .contents .work-desc {
+    color: #a0a0a0;
+  }
+
+  .main .contents .work-links a {
+    color: #c8c8c8;
+  }
+
+  .main .contents .work-links a:hover {
+    color: #9aa6e6;
+  }
+
+  /* Contact */
+  .contact-area h2 {
+    color: #d6d6d6;
+  }
+
+  .contact-area .account {
+    color: #dddddd;
+  }
+
+  .contact-area .account a {
+    color: #c8c8c8;
+  }
+
+  /* 濃いグレーのメールアイコンを明るく反転（Discord アイコンはそのまま） */
+  .contact-area .account img.mail-icon {
+    filter: invert(0.85);
+  }
+}
