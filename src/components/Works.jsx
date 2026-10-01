@@ -25,10 +25,13 @@ const sections = [
                 name: 'Honeycomb Quest',
                 image: Honeycomb,
                 tech: 'HTML / SCSS / React / Firebase',
-                desc: 'ハニカム英文法を用いた英語学習Webゲーム。3人チームで開発し、ゲームアイデア、プログラミングを担当。高専生140名・中学校教員8名へのアンケートで効果を検証し、実際の中学校の英語授業での使用が決まりました。',
+                desc: 'ハニカム英文法を用いた英語学習Webゲーム。3人チームで開発し、ゲームアイデア、プログラミングを担当。高専生140名・中学校教員8名へのアンケートで効果を検証し、その後中学校の英語授業で実際に使用されました。',
                 links: [
                     { label: 'Site', url: 'https://honeycombquest.web.app/' },
                     { label: '論文', url: 'https://www.tsuyama-ct.ac.jp/images/kyousyokuin/kiyou/kenkyuuhoukoku2024k02.pdf' },
+                    { label: 'GitHub', url: 'https://github.com/honeycomb-eng' },
+                    { label: 'ミニゲーム', url: 'https://honeycombgrammar.web.app/quiz' },
+                    { label: '収録英文リスト', url: 'https://honeycombgrammar.web.app/' },
                 ],
             },
             {
