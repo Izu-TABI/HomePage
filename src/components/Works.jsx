@@ -49,6 +49,7 @@ const sections = [
                 desc: '勉強時間を記録します。Discordと連携し、効率的な学習環境を整えます。',
                 links: [
                     { label: 'Site', url: 'https://izu-focus.web.app/' },
+                    { label: 'Focusについて', url: 'https://izu-focus.web.app/about' },
                     { label: 'GitHub', url: 'https://github.com/Izu-TABI/Focus' },
                 ],
             },
