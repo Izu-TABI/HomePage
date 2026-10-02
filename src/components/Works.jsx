@@ -145,10 +145,6 @@ function Works() {
 
                             {section.items.map((item) => (
                                 <div className="work-item" key={item.name}>
-                                    <p className="work-meta">
-                                        <span className="work-tech">{item.tech}</span>
-                                    </p>
-
                                     <div className="work-body">
                                         <img className="work-thumb" src={item.image} alt={item.name} />
 
