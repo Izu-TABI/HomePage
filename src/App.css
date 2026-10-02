@@ -32,21 +32,10 @@ nav {
           backdrop-filter: blur(8px);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s;
+  transition: opacity 0.3s ease, visibility 0.3s;
 }
 nav .nav-list {
   list-style: none;
-  font-family: "Roboto Mono", monospace;
-}
-nav .nav-list,
-nav li,
-nav a {
-  overflow: visible;
-}
-nav li {
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 nav a {
   display: flex;
@@ -63,32 +52,28 @@ nav a.active {
 }
 nav .nav-num {
   font-size: 0.75rem;
-  font-weight: 300;
+  font-variant-numeric: tabular-nums;
   color: #9a9a9a;
 }
 nav .nav-label {
   font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-}
-nav .dud {
-  color: #9a9a9a;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .open nav {
   opacity: 1;
   visibility: visible;
 }
-.open nav li {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: calc(0.1s + var(--i) * 0.06s);
-}
 .open .toggle-btn span:nth-child(1) {
   transform: translateY(4px) rotate(45deg);
 }
 .open .toggle-btn span:nth-child(2) {
   transform: translateY(-4px) rotate(-45deg);
+}
+
+.instant nav {
+  transition: none;
 }
 
 .toggle-btn {
@@ -161,11 +146,11 @@ nav .dud {
   flex-direction: column;
 }
 .home-main #text {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 100;
+  font-weight: 500;
   font-size: 2.8em;
   color: #515151;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  font-kerning: none;
   min-height: 1.4em;
 }
 .home-main .profile {
@@ -217,46 +202,26 @@ nav .dud {
     transform: translateY(0);
   }
 }
-.home-main .dud {
-  color: #757575;
-}
-.home-main .container,
-.home-main #text,
-.home-main .code-line {
+.home-main .morph-slot,
+.home-main .morph-slot span {
+  display: inline-block;
   overflow: visible;
 }
-.home-main .code-line {
+.home-main .morph-slot {
   position: relative;
 }
-.home-main .code-wrap {
+.home-main .morph-prev {
   position: absolute;
   top: 0;
-  white-space: nowrap;
-  transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+  left: 0;
 }
-.home-main .code-open {
-  right: 100%;
+.home-main.is-back,
+.home-main.is-back .profile {
+  animation: none;
+  opacity: 1;
 }
-.home-main .code-close {
-  left: 100%;
-}
-.home-main .code-func {
-  color: #4078f2;
-}
-.home-main #text.code-done .code-wrap {
-  opacity: 0;
-  filter: blur(4px);
-}
-.home-main #text.code-done .code-open {
-  transform: translateX(-0.3em);
-}
-.home-main #text.code-done .code-close {
-  transform: translateX(0.3em);
-}
-@media (max-width: 759px) {
-  .home-main .code-wrap {
-    display: none;
-  }
+.home-main #text {
+  overflow: visible;
 }
 .home-main-title {
   position: absolute;
@@ -314,6 +279,61 @@ nav .dud {
   width: 5vh;
 }
 
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 0.4s;
+}
+
+.vt-page::view-transition-old(root) {
+  animation: vtFadeOut 0.15s ease-in both;
+  mix-blend-mode: normal;
+}
+
+.vt-page::view-transition-new(root) {
+  animation: vtFadeIn 0.3s ease-out 0.15s both;
+  mix-blend-mode: normal;
+}
+
+.vt-page::view-transition-old(menu-button),
+.vt-page::view-transition-old(theme-button) {
+  display: none;
+}
+
+.vt-page::view-transition-new(menu-button),
+.vt-page::view-transition-new(theme-button) {
+  animation: none;
+}
+
+@keyframes vtFadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes vtFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+.toggle-btn {
+  view-transition-name: menu-button;
+}
+
+.theme-btn {
+  view-transition-name: theme-button;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+@supports (view-transition-name: none) {
+  .main .main {
+    animation: none;
+  }
+}
 .main {
   animation: fadeIn 0.5s ease-in;
 }
@@ -331,12 +351,26 @@ nav .dud {
   height: 100vh;
 }
 .main .title {
-  font-size: 4vh;
-  letter-spacing: 0.07rem;
   position: absolute;
-  left: 50%;
   top: 14%;
+  left: 50%;
+  width: 75%;
+  max-width: 800px;
   transform: translateX(-50%);
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #515151;
+}
+.main .title .title-num {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+  color: #9a9a9a;
 }
 .main .contents {
   width: 100vw;
@@ -345,7 +379,8 @@ nav .dud {
   justify-content: center;
 }
 .main .contents .likes-list {
-  width: 50%;
+  width: 75%;
+  max-width: 800px;
   position: absolute;
   top: 30vh;
 }
@@ -354,4 +389,10 @@ nav .dud {
 }
 .main .contents .likes-list li a {
   color: rgb(44, 38, 38);
+}
+@media (max-width: 480px) {
+  .main .title,
+  .main .contents .likes-list {
+    width: 88%;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -28,8 +28,7 @@
   color: #61afef;
 }
 
-[data-theme="dark"] nav .nav-num,
-[data-theme="dark"] nav .dud {
+[data-theme="dark"] nav .nav-num {
   color: #777777;
 }
 
@@ -40,14 +39,6 @@
 /* Home */
 [data-theme="dark"] .home-main #text {
   color: #d6d6d6;
-}
-
-[data-theme="dark"] .home-main .dud {
-  color: #8a8a8a;
-}
-
-[data-theme="dark"] .home-main .code-func {
-  color: #61afef;
 }
 
 [data-theme="dark"] .home-main .profile .profile-affiliation {
@@ -68,6 +59,15 @@
   border-color: #9aa6e6;
 }
 
+/* ページタイトル */
+[data-theme="dark"] .main .title {
+  color: #d6d6d6;
+}
+
+[data-theme="dark"] .main .title .title-num {
+  color: #777777;
+}
+
 /* Likes */
 [data-theme="dark"] .main .contents .likes-list li a {
   color: #dddddd;
@@ -76,7 +76,6 @@
 /* Career */
 [data-theme="dark"] .main .contents .career-section .section-heading {
   color: #e0e0e0;
-  border-bottom-color: #8a8a8a;
 }
 
 [data-theme="dark"] .main .contents .block-txt .block-date {
@@ -127,24 +126,6 @@
 
 [data-theme="dark"] .main .contents .work-links a:hover {
   color: #9aa6e6;
-}
-
-/* Contact */
-[data-theme="dark"] .contact-area h2 {
-  color: #d6d6d6;
-}
-
-[data-theme="dark"] .contact-area .account {
-  color: #dddddd;
-}
-
-[data-theme="dark"] .contact-area .account a {
-  color: #c8c8c8;
-}
-
-/* 濃いグレーのメールアイコンを明るく反転（Discord アイコンはそのまま） */
-[data-theme="dark"] .contact-area .account img.mail-icon {
-  filter: invert(0.85);
 }
 
 /* テーマ切り替えボタン（ハンバーガーの左隣。出てくる動きもハンバーガーと同じ） */

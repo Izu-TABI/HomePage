@@ -1,7 +1,14 @@
+/* もともと loading.css にあった指定。サイト全体の幅の計算に効いているので残す */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  /* サイト全体の文字は、読みやすい OS 標準のフォントにそろえる（日本語はヒラギノ → Noto Sans JP → メイリオ） */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Meiryo,
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

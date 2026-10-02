@@ -4,30 +4,18 @@ import Likes from './components/Likes';
 import Works from './components/Works';
 import Career from './components/Career';
 import Contact from './components/Contact';
+import Hamburger from './components/Hamburger';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import Loading from './components/Loading';
 import { Analytics } from "@vercel/analytics/react"
 import './DarkMode.css';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <>
-        <Loading />
-
-      </>
-    )
-  }
   return (
     <>
       <Analytics />
       <Router>
+        {/* メニューとテーマ切り替えは全ページ共通。ページを移っても作り直さないので、そのまま動かずに残る */}
+        <Hamburger />
         <div className="contaier">
           <div className="main">
             <Routes>

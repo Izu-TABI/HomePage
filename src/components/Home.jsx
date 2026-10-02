@@ -1,38 +1,32 @@
 import React, { useEffect } from 'react';
 import '../HomeAnimation.css';
-import Hamburger from './Hamburger';
-import { Link } from 'react-router-dom';
-import TextScramble from '../TextScramble';
+import TransitionLink from './TransitionLink';
+import TextMorph from '../TextMorph';
 
-const phrases = [
-  "Hello,",
-  "Izumoi",
-  ''
-]
+const phrases = ['Hello,', 'Izumoi']
+
+// タイトルのアニメーションは最初の1回だけ流す（ほかのページから戻ってきたときは、終わった状態で表示する）
+let introPlayed = false
 
 function Home() {
   // 画面が表示されてから、アニメーションを1回だけ動かす
   // （描画の途中で動かすと、開発モードでは2重に動いてチラつく）
   useEffect(() => {
-    let counter = 0
+    if (introPlayed) return
     let timer
-    const line = document.getElementById('text')
-    const el = document.getElementById('text-scramble')
+    const el = document.getElementById('text')
     el.textContent = ''
-    const fx = new TextScramble(el)
-    const next = () => {
-      if ((counter + 1) % phrases.length === 0) {
-        // 最後まで出し終えたら printf(""); を取り外す（App.scss の .code-done）
-        line.classList.add('code-done')
-        return;
-      } else {
-        fx.setText(phrases[counter]).then(() => {
-          timer = setTimeout(next, 800)
-        })
-        counter = (counter + 1) % phrases.length;
-      }
+    const fx = new TextMorph(el)
+    const show = (i) => {
+      fx.setText(phrases[i]).then(() => {
+        if (i + 1 < phrases.length) {
+          timer = setTimeout(() => show(i + 1), 800)
+        } else {
+          introPlayed = true
+        }
+      })
     }
-    next()
+    show(0)
     return () => {
       fx.stop()
       clearTimeout(timer)
@@ -40,26 +34,19 @@ function Home() {
   }, [])
 
   return (
-    <div className='home-main' style={{ position: 'relative' }}>
-      <Hamburger />
+    <div className={introPlayed ? 'home-main is-back' : 'home-main'} style={{ position: 'relative' }}>
       {/* <h1 className='home-main-title'>Izu-TABI</h1> */}
       <div className="container">
-        {/* printf(""); はアニメーション中だけ表示して、終わったら取り外す */}
-        <div id="text">
-          <span className="code-line">
-            <span className="code-wrap code-open" aria-hidden="true"><span className="code-func">printf</span>{'("'}</span>
-            <span id="text-scramble"></span>
-            <span className="code-wrap code-close" aria-hidden="true">{'");'}</span>
-          </span>
-        </div>
+        <div id="text">{introPlayed ? phrases[phrases.length - 1] : ''}</div>
 
         <div className="profile">
-            <p className="profile-affiliation">Informatics and Data Science, Hiroshima University</p>
+            {/* <p className="profile-affiliation">Informatics and Data Science, Hiroshima University</p> */}
+            <p className="profile-affiliation">準学士 / 広島大学 情報科学部</p>
             <p className="profile-lead">
             </p>
             <div className="profile-links">
-              <Link to="/career">Career</Link>
-              <Link to="/works">Works</Link>
+              <TransitionLink to="/career">Career</TransitionLink>
+              <TransitionLink to="/works">Works</TransitionLink>
               <a href="https://github.com/Izu-TABI" target="_blank" rel="noreferrer">GitHub</a>
             </div>
         </div>

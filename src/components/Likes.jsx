@@ -1,15 +1,12 @@
 import React from 'react'
-import Hamburger from './Hamburger'
+import PageTitle from './PageTitle'
 
 
 function Likes() {
   return (
     <>
       <div className="main">
-        <Hamburger />
-        <h2 className="title">
-          Likes
-        </h2>
+        <PageTitle>Likes</PageTitle>
 
         <div className="contents" style={{ display: 'flex', justifyContent: 'center' }}>
 

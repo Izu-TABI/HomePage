@@ -14,11 +14,10 @@
   margin-top: 90px;
   padding: 0;
   margin-bottom: 0;
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 0.12em;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: rgb(44, 38, 38);
-  border-bottom: 1px solid rgb(40, 39, 39);
 }
 .main .contents .career-section:first-child .section-heading {
   margin-top: 0;
@@ -29,7 +28,9 @@
 }
 .main .contents .block-txt .block-date {
   color: rgb(122, 122, 122);
-  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
 }
 .main .contents .block-txt p.tit {
   color: rgb(40, 39, 39);
@@ -47,4 +48,10 @@
   margin: 4px 0 0;
   font-size: 0.9rem;
   color: rgb(110, 110, 110);
+}
+
+@media (max-width: 480px) {
+  .main .contents .block {
+    width: 88%;
+  }
 }/*# sourceMappingURL=Career.css.map */

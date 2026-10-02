@@ -15,9 +15,10 @@
   .works-section {
     .works-heading {
       margin-top: 150px;
-      font-size: 1.3rem;
-      font-weight: bold;
-      letter-spacing: 0.12em;
+      // ページタイトルより小さく、本文より少し太くして、見出しだとわかるようにする
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
       color: rgb(44, 38, 38);
     }
 
@@ -38,7 +39,8 @@
     align-items: center;
     gap: 10px;
     color: rgb(122, 122, 122);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
 
     &::after {
       content: "";

@@ -19,11 +19,11 @@
       margin-top: 90px;
       padding: 0;
       margin-bottom: 0;
-      font-size: 1.4rem;
-      font-weight: bold;
-      letter-spacing: 0.12em;
+      // ページタイトルより小さく、本文より少し太くして、見出しだとわかるようにする
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
       color: rgb(44, 38, 38);
-      border-bottom: 1px solid rgb(40, 39, 39);
     }
 
     &:first-child .section-heading {
@@ -37,9 +37,13 @@
 
     position: relative;
 
+    // 日付（Contact ページのラベルにも使っている）
     .block-date {
       color: rgb(122, 122, 122);
-      font-weight: bold;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      // 数字の幅をそろえて、日付の桁が縦にそろうようにする
+      font-variant-numeric: tabular-nums;
     }
 
     p.tit {
@@ -81,5 +85,12 @@
     margin: 4px 0 0;
     font-size: 0.9rem;
     color: rgb(110, 110, 110);
+  }
+}
+
+// スマホでは Works と同じく幅を広げる
+@media (max-width: 480px) {
+  .main .contents .block {
+    width: 88%;
   }
 }

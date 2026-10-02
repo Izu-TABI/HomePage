@@ -20,7 +20,7 @@ p {
 
 
 // メニュー（Hamburger.jsx）
-// 開くと背景がふわっと現れ、項目がトップのタイトルと同じようにスクランブルしながら順番に出てくる
+// 開くと、背景ごと項目がフェードで現れるだけ（動きは1つにしてシンプルに）
 nav {
   position: fixed;
   top: 0;
@@ -35,24 +35,10 @@ nav {
   backdrop-filter: blur(8px);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s;
+  transition: opacity 0.3s ease, visibility 0.3s;
 
   .nav-list {
     list-style: none;
-    font-family: 'Roboto Mono', monospace;
-  }
-
-  // 項目が下から出てくるときにスクロールバーが出ないように（先頭の * { overflow-x: hidden } を打ち消す）
-  .nav-list,
-  li,
-  a {
-    overflow: visible;
-  }
-
-  li {
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
   }
 
   a {
@@ -74,18 +60,14 @@ nav {
   // 項目の番号（エディタの行番号のように）
   .nav-num {
     font-size: 0.75rem;
-    font-weight: 300;
+    font-variant-numeric: tabular-nums;
     color: #9a9a9a;
   }
 
   .nav-label {
     font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-  }
-
-  .dud {
-    color: #9a9a9a;
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -93,13 +75,6 @@ nav {
   nav {
     opacity: 1;
     visibility: visible;
-
-    // 上の項目から順番に出す（--i は Hamburger.jsx で指定）
-    li {
-      opacity: 1;
-      transform: translateY(0);
-      transition-delay: calc(0.1s + var(--i) * 0.06s);
-    }
   }
 
   .toggle-btn {
@@ -111,6 +86,11 @@ nav {
       transform: translateY(-4px) rotate(-45deg);
     }
   }
+}
+
+// ページを移るときは、メニューを一瞬で閉じる（Hamburger.jsx の instant）
+.instant nav {
+  transition: none;
 }
 
 // ハンバーガー（細い2本線。開くと × になる）
@@ -180,8 +160,6 @@ nav {
 
   // animation
 
-  // Roboto Mono は public/index.html で読み込んでいる
-
   .container {
     height: 100%;
     width: 70%;
@@ -194,11 +172,12 @@ nav {
   }
 
   #text {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 2.8em;
     color: #515151;
-    letter-spacing: 0.1em;  
+    letter-spacing: 0.04em;
+    // 1文字ずつ移り変わる途中と終わったあとで、文字の間隔が変わらないよう、カーニングはしない（TextMorph.js）
+    font-kerning: none;
 
     // 文字が空のときも高さを確保して、下の自己紹介がガタつかないようにする
     min-height: 1.4em;
@@ -266,64 +245,35 @@ nav {
     }
 
   }
-  .dud {
-    color: #757575;
-  }
-
-  // printf("Hello,"); の演出（Home.jsx）
-  // 名前は最初から中央に置いたまま、左右に printf(" と "); を添える
-  // アニメーションが終わると #text に .code-done が付き、printf(" と "); だけがフェードで外れる（名前は動かない）
-  .container,
-  #text,
-  .code-line {
-    // 左右に添えた printf(" と "); が切れないように（先頭の * { overflow-x: hidden } を打ち消す）
+  // 1文字ずつ移り変わるアニメーション（TextMorph.js）の、1文字分の枠
+  .morph-slot,
+  .morph-slot span {
+    display: inline-block;
+    // ぼかしや上下の動きが切れないように（先頭の * { overflow-x: hidden } を打ち消す）
     overflow: visible;
   }
 
-  .code-line {
+  .morph-slot {
     position: relative;
   }
 
-  .code-wrap {
+  // 前の文字は、新しい文字の上に重ねて消していく
+  .morph-prev {
     position: absolute;
     top: 0;
-    white-space: nowrap;
-    transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+    left: 0;
   }
 
-  .code-open {
-    right: 100%;
+  // ほかのページから戻ってきたときは、登場のアニメーションをせずにそのまま表示する
+  &.is-back,
+  &.is-back .profile {
+    animation: none;
+    opacity: 1;
   }
 
-  .code-close {
-    left: 100%;
-  }
-
-  // printf の色
-  .code-func {
-    color: #4078f2;
-  }
-
-  #text.code-done {
-    .code-wrap {
-      opacity: 0;
-      filter: blur(4px);
-    }
-
-    .code-open {
-      transform: translateX(-0.3em);
-    }
-
-    .code-close {
-      transform: translateX(0.3em);
-    }
-  }
-
-  // スマホでは printf(""); が横に収まらないので出さない（名前のアニメーションだけにする）
-  @media (max-width: 759px) {
-    .code-wrap {
-      display: none;
-    }
+  // 文字が移り変わるときのぼかし・上下の動きが切れないように（先頭の * { overflow-x: hidden } を打ち消す）
+  #text {
+    overflow: visible;
   }
 
   /// ----------animation css
@@ -414,6 +364,72 @@ nav {
 
 // components
 
+// ページ・テーマの切り替え（viewTransition.js。View Transitions API）
+// テーマの切り替え：文字の位置は変わらず色だけが変わるので、前後の画面をそのまま重ねて入れ替える
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 0.4s;
+}
+
+// ページの切り替え：文字どうしが重なって見えないよう、前のページが消えきってから次のページを出す
+.vt-page::view-transition-old(root) {
+  animation: vtFadeOut 0.15s ease-in both;
+  mix-blend-mode: normal;
+}
+
+.vt-page::view-transition-new(root) {
+  animation: vtFadeIn 0.3s ease-out 0.15s both;
+  mix-blend-mode: normal;
+}
+
+// ヘッダーのボタンは重ねて入れ替えず、今の状態をそのまま見せる（× が = に戻る動きもそのまま見える）
+.vt-page::view-transition-old(menu-button),
+.vt-page::view-transition-old(theme-button) {
+  display: none;
+}
+
+.vt-page::view-transition-new(menu-button),
+.vt-page::view-transition-new(theme-button) {
+  animation: none;
+}
+
+@keyframes vtFadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vtFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+// ヘッダーのボタンは、ページが切り替わっても消えずにそのまま残す（画面全体とは別に扱う）
+.toggle-btn {
+  view-transition-name: menu-button;
+}
+
+.theme-btn {
+  view-transition-name: theme-button;
+}
+
+// 動きを減らす設定にしている人には、切り替えのアニメーションをしない
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+// ページごとのフェードは、View Transitions に対応していないブラウザだけにする（二重にフェードしないように）
+@supports (view-transition-name: none) {
+  .main .main {
+    animation: none;
+  }
+}
+
 .main {
   animation: fadeIn 0.5s ease-in;
 
@@ -432,13 +448,30 @@ nav {
   width: 100vw;
   height: 100vh;
 
+  // 各ページのタイトル（PageTitle.jsx）
+  // メニューの項目と同じ書体・番号にして、本文（幅 75%・最大 800px）の左端にそろえる
   .title {
-    font-size: 4vh;
-    letter-spacing: 0.07rem;
     position: absolute;
-    left: 50%;
     top: 14%;
+    left: 50%;
+    width: 75%;
+    max-width: 800px;
     transform: translateX(-50%);
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #515151;
+
+    .title-num {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      font-variant-numeric: tabular-nums;
+      color: #9a9a9a;
+    }
   }
 
 
@@ -452,7 +485,8 @@ nav {
 
 
     .likes-list {
-      width: 50%;
+      width: 75%;
+      max-width: 800px;
       position: absolute;
       top: 30vh;
 
@@ -466,5 +500,13 @@ nav {
     }
 
     // 経歴（Activities）ページのスタイルは Activities.scss へ移動
+  }
+
+  // スマホでは本文と同じく幅を広げる
+  @media (max-width: 480px) {
+    .title,
+    .contents .likes-list {
+      width: 88%;
+    }
   }
 }

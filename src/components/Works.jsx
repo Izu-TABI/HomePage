@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import Hamburger from './Hamburger'
-import Loading from './Loading';
+import React from 'react'
+import PageTitle from './PageTitle';
 import '../Works.css'
 import Log from '../works_images/LOG_logo.png';
 import Weather from '../works_images/weather.png';
@@ -133,24 +132,9 @@ const sections = [
 ]
 
 function Works() {
-    const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        setIsLoading(false);
-    }, []);
-
-    if (isLoading) {
-        return (
-            <>
-                <Loading />
-            </>
-        )
-    }
     return (
         <div className="main">
-            <Hamburger />
-            <h2 className="title">
-                Works
-            </h2>
+            <PageTitle>Works</PageTitle>
 
             <div className="contents">
                 <div className="works-list">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { transition } from '../viewTransition'
 
 // テーマは <html data-theme="dark|light"> で切り替える
 // 初期値（ダーク）と、保存したテーマの読み込みは public/index.html で行っている
@@ -9,13 +10,16 @@ function ThemeToggle() {
 
   function toggleTheme() {
     const next = theme === 'dark' ? 'light' : 'dark';
-    document.documentElement.dataset.theme = next;
+    // 色が一瞬で切り替わらないよう、画面全体をなめらかに入れ替える（viewTransition.js）
+    transition(() => {
+      document.documentElement.dataset.theme = next;
+      setTheme(next);
+    });
     try {
       localStorage.setItem('theme', next);
     } catch (e) {
       // 保存できない環境（プライベートブラウズなど）でも、切り替え自体は行う
     }
-    setTheme(next);
   }
 
   const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';

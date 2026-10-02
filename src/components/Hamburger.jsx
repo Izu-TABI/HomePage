@@ -1,39 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import TextScramble from '../TextScramble';
-
-// メニューの項目（GitHub だけ外部リンク）
-const links = [
-  { label: 'Home', to: '/' },
-  { label: 'Works', to: '/works' },
-  { label: 'Career', to: '/career' },
-  { label: 'GitHub', href: 'https://github.com/Izu-TABI' },
-  { label: 'Contact', to: '/contact' },
-]
+import menu from '../menu';
+import { transition } from '../viewTransition';
 
 function Hamburger() {
   const [open, setOpen] = useState(false);
-  const labels = useRef([]);
-
-  // 開いたら、項目の文字をトップのタイトルと同じようにスクランブルさせながら、上から順番に出す
-  useEffect(() => {
-    if (!open) return;
-    const effects = labels.current.map((el) => new TextScramble(el, 10));
-    effects.forEach((fx) => {
-      fx.el.textContent = '';
-    });
-    const timers = effects.map((fx, i) =>
-      setTimeout(() => fx.setText(links[i].label), 100 + i * 60)
-    );
-    return () => {
-      timers.forEach(clearTimeout);
-      effects.forEach((fx, i) => {
-        fx.stop();
-        fx.el.textContent = links[i].label;
-      });
-    };
-  }, [open]);
+  // ページを移るときは、画面全体の切り替え（viewTransition.js）に任せて、メニュー自身はフェードせずに一瞬で閉じる
+  // （メニューが自分でもフェードすると、次のページの上にメニューが残って二重に見える）
+  const [instant, setInstant] = useState(false);
+  const navigate = useNavigate();
 
   // Esc キーでも閉じる
   useEffect(() => {
@@ -50,22 +26,34 @@ function Hamburger() {
     if (e.target === e.currentTarget) setOpen(false);
   }
 
+  // メニューから選んだページへ、なめらかに切り替える
+  function goTo(e, to) {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    transition(() => {
+      setInstant(true);
+      setOpen(false);
+      navigate(to);
+      window.scrollTo(0, 0);
+    }, { type: 'page' });
+  }
+
   return (
-    <div id='navArea' className={open ? 'open' : ''}>
+    <div id='navArea' className={[open && 'open', instant && 'instant'].filter(Boolean).join(' ')}>
       <nav onClick={closeOnBackground}>
         <ul className="nav-list">
-          {links.map((link, i) => {
+          {menu.map((link, i) => {
             const content = (
               <>
                 <span className="nav-num">{String(i + 1).padStart(2, '0')}</span>
-                <span className="nav-label" ref={(el) => { labels.current[i] = el }}>{link.label}</span>
+                <span className="nav-label">{link.label}</span>
               </>
             );
             return (
-              <li key={link.label} style={{ '--i': i }}>
+              <li key={link.label}>
                 {link.href
                   ? <a href={link.href} aria-label={link.label}>{content}</a>
-                  : <NavLink to={link.to} end onClick={() => setOpen(false)} aria-label={link.label}>{content}</NavLink>}
+                  : <NavLink to={link.to} end onClick={(e) => goTo(e, link.to)} aria-label={link.label}>{content}</NavLink>}
               </li>
             );
           })}
@@ -75,7 +63,10 @@ function Hamburger() {
       <button
         type="button"
         className="toggle-btn"
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setInstant(false);
+          setOpen(!open);
+        }}
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
       >

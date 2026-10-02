@@ -1,5 +1,5 @@
 import React from 'react'
-import Hamburger from './Hamburger'
+import PageTitle from './PageTitle'
 import '../Career.css'
 
 // award: タイトルの横に強調表示される受賞・表彰
@@ -59,10 +59,7 @@ function Career() {
     return (
         <>
             <div className="main">
-                <Hamburger />
-                <h2 className="title">
-                    Career
-                </h2>
+                <PageTitle>Career</PageTitle>
 
                 <div className="contents">
                     <div className="block">

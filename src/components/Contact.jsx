@@ -1,33 +1,33 @@
 import React from 'react';
-import '../Contact.css';
-import mailIcon from '../contact_images/mailIcon.png';
-import discordIcon from '../contact_images/discord.png';
-import Hamburger from './Hamburger';
+import '../Career.css';
+import PageTitle from './PageTitle';
+
+// 連絡先。Career と同じ「ラベル＋内容」の一覧で表示する（スタイルは Career.css）
+const accounts = [
+  { label: 'Email', text: 'masakisama14@gmail.com', url: 'mailto:masakisama14@gmail.com' },
+  { label: 'Discord', text: '@tabibito14', url: 'https://discord.com/users/807536333266354186' },
+]
 
 const Contact = () => {
   return (
     <div className="main">
-      <Hamburger />
-      <div className='contact-area'>
-      
-      <h2>
-        Contact
-      </h2>
-      <div>
-        <div className='account'>
-          <img className="mail-icon" src={mailIcon} alt="" /><br />
-          <a href="mailto:masakisama14@gmail.com">masakisama14@gmail.com</a><br />
-        </div>
-        <div className='account'>
-          <img src={discordIcon} alt="" /><br />
-          <a href="https://discord.com/users/807536333266354186">@tabibito14</a>
-        </div>
+      <PageTitle>Contact</PageTitle>
 
+      <div className="contents">
+        <div className="block">
+          {accounts.map((account) => (
+            <div className="block-txt" key={account.label}>
+              <div className="block-date">
+                <p>{account.label}</p>
+              </div>
+              <p className="tit">
+                <a href={account.url}>{account.text}</a>
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-    </div>
-    
-    
   )
 }
 
