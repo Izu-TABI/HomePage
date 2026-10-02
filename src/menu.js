@@ -1,5 +1,4 @@
-// メニューの項目（GitHub だけ外部リンク）
-// 番号はこの並び順で決まり、各ページのタイトル（PageTitle.jsx）にも同じ番号が出る
+// メニューの項目（GitHub だけ外部リンク）。この順番でメニューに並ぶ
 const menu = [
   { label: 'Home', to: '/' },
   { label: 'Works', to: '/works' },

@@ -39,10 +39,12 @@
 .main .contents .block-txt p.tit a {
   color: inherit;
   text-decoration: underline;
+  text-decoration-color: #b0b0b0;
   text-underline-offset: 3px;
 }
 .main .contents .block-txt p.tit a:hover {
-  color: rgb(78, 90, 149);
+  color: #000000;
+  text-decoration-color: #000000;
 }
 .main .contents .desc {
   margin: 4px 0 0;

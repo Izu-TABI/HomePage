@@ -42,21 +42,13 @@ function Hamburger() {
     <div id='navArea' className={[open && 'open', instant && 'instant'].filter(Boolean).join(' ')}>
       <nav onClick={closeOnBackground}>
         <ul className="nav-list">
-          {menu.map((link, i) => {
-            const content = (
-              <>
-                <span className="nav-num">{String(i + 1).padStart(2, '0')}</span>
-                <span className="nav-label">{link.label}</span>
-              </>
-            );
-            return (
-              <li key={link.label}>
-                {link.href
-                  ? <a href={link.href} aria-label={link.label}>{content}</a>
-                  : <NavLink to={link.to} end onClick={(e) => goTo(e, link.to)} aria-label={link.label}>{content}</NavLink>}
-              </li>
-            );
-          })}
+          {menu.map((link) => (
+            <li key={link.label}>
+              {link.href
+                ? <a href={link.href}>{link.label}</a>
+                : <NavLink to={link.to} end onClick={(e) => goTo(e, link.to)}>{link.label}</NavLink>}
+            </li>
+          ))}
         </ul>
       </nav>
 

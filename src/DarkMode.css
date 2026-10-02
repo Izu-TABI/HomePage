@@ -19,17 +19,9 @@
   background-color: rgba(22, 22, 22, 0.9);
 }
 
-[data-theme="dark"] nav a {
-  color: #d6d6d6;
-}
-
 [data-theme="dark"] nav a:hover,
 [data-theme="dark"] nav a.active {
-  color: #61afef;
-}
-
-[data-theme="dark"] nav .nav-num {
-  color: #777777;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .toggle-btn span {
@@ -55,17 +47,13 @@
 }
 
 [data-theme="dark"] .home-main .profile .profile-links a:hover {
-  color: #9aa6e6;
-  border-color: #9aa6e6;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 /* ページタイトル */
 [data-theme="dark"] .main .title {
   color: #d6d6d6;
-}
-
-[data-theme="dark"] .main .title .title-num {
-  color: #777777;
 }
 
 /* Likes */
@@ -86,8 +74,13 @@
   color: #e0e0e0;
 }
 
+[data-theme="dark"] .main .contents .block-txt p.tit a {
+  text-decoration-color: #5a5a5a;
+}
+
 [data-theme="dark"] .main .contents .block-txt p.tit a:hover {
-  color: #9aa6e6;
+  color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 
 [data-theme="dark"] .main .contents .desc {
@@ -122,10 +115,12 @@
 
 [data-theme="dark"] .main .contents .work-links a {
   color: #c8c8c8;
+  text-decoration-color: #5a5a5a;
 }
 
 [data-theme="dark"] .main .contents .work-links a:hover {
-  color: #9aa6e6;
+  color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 
 /* テーマ切り替えボタン（ハンバーガーの左隣。出てくる動きもハンバーガーと同じ） */

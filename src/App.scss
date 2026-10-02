@@ -42,32 +42,20 @@ nav {
   }
 
   a {
-    display: flex;
-    align-items: baseline;
-    gap: 1.2em;
+    display: block;
     padding: 0.4em 0;
-    color: #515151;
-    text-decoration: none;
-    transition: color 0.2s;
-
-    // 今いるページ（NavLink が .active を付ける）と、マウスを乗せたとき
-    &:hover,
-    &.active {
-      color: #4078f2;
-    }
-  }
-
-  // 項目の番号（エディタの行番号のように）
-  .nav-num {
-    font-size: 0.75rem;
-    font-variant-numeric: tabular-nums;
-    color: #9a9a9a;
-  }
-
-  .nav-label {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.02em;
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    // 今いるページ（NavLink が .active を付ける）と、マウスを乗せたときは差し色（ライトは黒・ダークは白）にする
+    &:hover,
+    &.active {
+      color: #000000;
+    }
   }
 }
 
@@ -224,8 +212,8 @@ nav {
         transition: color 0.2s, border-color 0.2s;
 
         &:hover {
-          color: rgb(78, 90, 149);
-          border-color: rgb(78, 90, 149);
+          color: #000000;
+          border-color: #000000;
         }
       }
     }
@@ -449,7 +437,7 @@ nav {
   height: 100vh;
 
   // 各ページのタイトル（PageTitle.jsx）
-  // メニューの項目と同じ書体・番号にして、本文（幅 75%・最大 800px）の左端にそろえる
+  // メニューの項目と同じ文字の大きさ・太さにして、本文（幅 75%・最大 800px）の左端にそろえる
   .title {
     position: absolute;
     top: 14%;
@@ -457,21 +445,10 @@ nav {
     width: 75%;
     max-width: 800px;
     transform: translateX(-50%);
-    display: flex;
-    align-items: baseline;
-    gap: 1.2rem;
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.02em;
     color: #515151;
-
-    .title-num {
-      font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0;
-      font-variant-numeric: tabular-nums;
-      color: #9a9a9a;
-    }
   }
 
 

@@ -38,27 +38,18 @@ nav .nav-list {
   list-style: none;
 }
 nav a {
-  display: flex;
-  align-items: baseline;
-  gap: 1.2em;
+  display: block;
   padding: 0.4em 0;
-  color: #515151;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #8a8a8a;
   text-decoration: none;
   transition: color 0.2s;
 }
 nav a:hover,
 nav a.active {
-  color: #4078f2;
-}
-nav .nav-num {
-  font-size: 0.75rem;
-  font-variant-numeric: tabular-nums;
-  color: #9a9a9a;
-}
-nav .nav-label {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  color: #000000;
 }
 
 .open nav {
@@ -189,8 +180,8 @@ nav .nav-label {
   transition: color 0.2s, border-color 0.2s;
 }
 .home-main .profile .profile-links a:hover {
-  color: rgb(78, 90, 149);
-  border-color: rgb(78, 90, 149);
+  color: #000000;
+  border-color: #000000;
 }
 @keyframes profileFadeIn {
   from {
@@ -357,20 +348,10 @@ nav .nav-label {
   width: 75%;
   max-width: 800px;
   transform: translateX(-50%);
-  display: flex;
-  align-items: baseline;
-  gap: 1.2rem;
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #515151;
-}
-.main .title .title-num {
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-variant-numeric: tabular-nums;
-  color: #9a9a9a;
 }
 .main .contents {
   width: 100vw;
