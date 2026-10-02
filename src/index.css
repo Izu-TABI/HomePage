@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* 見た目は既定の白と同じ。明示しておかないと、メニューの背景ぼかし（backdrop-filter）が白を拾えずグレーになる */
+  background-color: #ffffff;
 }
 
 code {
