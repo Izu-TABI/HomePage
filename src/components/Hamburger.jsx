@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 function Hamburger() {
 
@@ -43,6 +44,8 @@ function Hamburger() {
         <span></span>
         <span></span>
       </div>
+
+      <ThemeToggle />
 
       <div id="mask" onClick={maskClick}></div>
     </div>

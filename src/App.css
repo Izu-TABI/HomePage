@@ -133,7 +133,6 @@ nav .links span {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
 }
 .home-main .container {
   height: 100%;
@@ -203,6 +202,44 @@ nav .links span {
 }
 .home-main .dud {
   color: #757575;
+}
+.home-main .container,
+.home-main #text,
+.home-main .code-line {
+  overflow: visible;
+}
+.home-main .code-line {
+  position: relative;
+}
+.home-main .code-wrap {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+}
+.home-main .code-open {
+  right: 100%;
+}
+.home-main .code-close {
+  left: 100%;
+}
+.home-main .code-func {
+  color: #4078f2;
+}
+.home-main #text.code-done .code-wrap {
+  opacity: 0;
+  filter: blur(4px);
+}
+.home-main #text.code-done .code-open {
+  transform: translateX(-0.3em);
+}
+.home-main #text.code-done .code-close {
+  transform: translateX(0.3em);
+}
+@media (max-width: 759px) {
+  .home-main .code-wrap {
+    display: none;
+  }
 }
 .home-main-title {
   position: absolute;

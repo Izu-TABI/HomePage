@@ -160,7 +160,7 @@ nav {
 
   // animation
 
-  @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+  // Roboto Mono は public/index.html で読み込んでいる
 
   .container {
     height: 100%;
@@ -248,6 +248,62 @@ nav {
   }
   .dud {
     color: #757575;
+  }
+
+  // printf("Hello,"); の演出（Home.jsx）
+  // 名前は最初から中央に置いたまま、左右に printf(" と "); を添える
+  // アニメーションが終わると #text に .code-done が付き、printf(" と "); だけがフェードで外れる（名前は動かない）
+  .container,
+  #text,
+  .code-line {
+    // 左右に添えた printf(" と "); が切れないように（先頭の * { overflow-x: hidden } を打ち消す）
+    overflow: visible;
+  }
+
+  .code-line {
+    position: relative;
+  }
+
+  .code-wrap {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+  }
+
+  .code-open {
+    right: 100%;
+  }
+
+  .code-close {
+    left: 100%;
+  }
+
+  // printf の色
+  .code-func {
+    color: #4078f2;
+  }
+
+  #text.code-done {
+    .code-wrap {
+      opacity: 0;
+      filter: blur(4px);
+    }
+
+    .code-open {
+      transform: translateX(-0.3em);
+    }
+
+    .code-close {
+      transform: translateX(0.3em);
+    }
+  }
+
+  // スマホでは printf(""); が横に収まらないので出さない（名前のアニメーションだけにする）
+  @media (max-width: 759px) {
+    .code-wrap {
+      display: none;
+    }
   }
 
   /// ----------animation css

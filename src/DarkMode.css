@@ -1,139 +1,176 @@
-/* ダークモード（OS の設定に合わせて自動で切り替わる）
-   ライトモードのデザインはそのままで、色だけを上書きしている */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
+/* ダークモード
+   <html data-theme="dark"> のときだけ色を上書きしている（初期値はダーク。public/index.html を参照）
+   ライトモードのデザインはそのまま */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
 
-  body {
-    background-color: #161616;
-    color: #e4e4e4;
-  }
+[data-theme="dark"] body {
+  background-color: #161616;
+  color: #e4e4e4;
+}
 
-  p {
-    color: #b5b5b5;
-  }
+[data-theme="dark"] p {
+  color: #b5b5b5;
+}
 
-  /* ナビゲーション */
-  nav {
-    background-color: #1e1e1e;
-  }
+/* ナビゲーション */
+[data-theme="dark"] nav {
+  background-color: #1e1e1e;
+}
 
-  nav .links a {
-    color: #c8c8c8;
-  }
+[data-theme="dark"] nav .links a {
+  color: #c8c8c8;
+}
 
-  .open nav {
-    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
-  }
+[data-theme="dark"] .open nav {
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+}
 
-  .toggle-btn span {
-    background-color: #e0e0e0;
-  }
+[data-theme="dark"] .toggle-btn span {
+  background-color: #e0e0e0;
+}
 
-  /* Home */
-  .home-main #text {
-    color: #d6d6d6;
-  }
+/* Home */
+[data-theme="dark"] .home-main #text {
+  color: #d6d6d6;
+}
 
-  .home-main .dud {
-    color: #8a8a8a;
-  }
+[data-theme="dark"] .home-main .dud {
+  color: #8a8a8a;
+}
 
-  .home-main .profile .profile-affiliation {
-    color: #c8c8c8;
-  }
+[data-theme="dark"] .home-main .code-func {
+  color: #61afef;
+}
 
-  .home-main .profile .profile-lead {
-    color: #9a9a9a;
-  }
+[data-theme="dark"] .home-main .profile .profile-affiliation {
+  color: #c8c8c8;
+}
 
-  .home-main .profile .profile-links a {
-    color: #d6d6d6;
-    border-bottom-color: #5a5a5a;
-  }
+[data-theme="dark"] .home-main .profile .profile-lead {
+  color: #9a9a9a;
+}
 
-  .home-main .profile .profile-links a:hover {
-    color: #9aa6e6;
-    border-color: #9aa6e6;
-  }
+[data-theme="dark"] .home-main .profile .profile-links a {
+  color: #d6d6d6;
+  border-bottom-color: #5a5a5a;
+}
 
-  /* Likes */
-  .main .contents .likes-list li a {
-    color: #dddddd;
-  }
+[data-theme="dark"] .home-main .profile .profile-links a:hover {
+  color: #9aa6e6;
+  border-color: #9aa6e6;
+}
 
-  /* Career */
-  .main .contents .career-section .section-heading {
-    color: #e0e0e0;
-    border-bottom-color: #8a8a8a;
-  }
+/* Likes */
+[data-theme="dark"] .main .contents .likes-list li a {
+  color: #dddddd;
+}
 
-  .main .contents .block-txt .block-date {
-    color: #9a9a9a;
-  }
+/* Career */
+[data-theme="dark"] .main .contents .career-section .section-heading {
+  color: #e0e0e0;
+  border-bottom-color: #8a8a8a;
+}
 
-  .main .contents .block-txt p.tit {
-    color: #e0e0e0;
-  }
+[data-theme="dark"] .main .contents .block-txt .block-date {
+  color: #9a9a9a;
+}
 
-  .main .contents .block-txt p.tit a:hover {
-    color: #9aa6e6;
-  }
+[data-theme="dark"] .main .contents .block-txt p.tit {
+  color: #e0e0e0;
+}
 
-  .main .contents .desc {
-    color: #a0a0a0;
-  }
+[data-theme="dark"] .main .contents .block-txt p.tit a:hover {
+  color: #9aa6e6;
+}
 
-  /* Works */
-  .main .contents .works-section .works-heading {
-    color: #e0e0e0;
-  }
+[data-theme="dark"] .main .contents .desc {
+  color: #a0a0a0;
+}
 
-  .main .contents .work-meta {
-    color: #9a9a9a;
-  }
+/* Works */
+[data-theme="dark"] .main .contents .works-section .works-heading {
+  color: #e0e0e0;
+}
 
-  .main .contents .work-meta::after {
-    background-color: #555555;
-  }
+[data-theme="dark"] .main .contents .work-meta {
+  color: #9a9a9a;
+}
 
-  /* サムネイルは画像の見え方を変えないよう、背景は明るいまま枠線だけ暗くする */
-  .main .contents .work-thumb {
-    border-color: #3a3a3a;
-  }
+[data-theme="dark"] .main .contents .work-meta::after {
+  background-color: #555555;
+}
 
-  .main .contents .work-name {
-    color: #e0e0e0;
-  }
+/* サムネイルは画像の見え方を変えないよう、背景は明るいまま枠線だけ暗くする */
+[data-theme="dark"] .main .contents .work-thumb {
+  border-color: #3a3a3a;
+}
 
-  .main .contents .work-desc {
-    color: #a0a0a0;
-  }
+[data-theme="dark"] .main .contents .work-name {
+  color: #e0e0e0;
+}
 
-  .main .contents .work-links a {
-    color: #c8c8c8;
-  }
+[data-theme="dark"] .main .contents .work-desc {
+  color: #a0a0a0;
+}
 
-  .main .contents .work-links a:hover {
-    color: #9aa6e6;
-  }
+[data-theme="dark"] .main .contents .work-links a {
+  color: #c8c8c8;
+}
 
-  /* Contact */
-  .contact-area h2 {
-    color: #d6d6d6;
-  }
+[data-theme="dark"] .main .contents .work-links a:hover {
+  color: #9aa6e6;
+}
 
-  .contact-area .account {
-    color: #dddddd;
-  }
+/* Contact */
+[data-theme="dark"] .contact-area h2 {
+  color: #d6d6d6;
+}
 
-  .contact-area .account a {
-    color: #c8c8c8;
-  }
+[data-theme="dark"] .contact-area .account {
+  color: #dddddd;
+}
 
-  /* 濃いグレーのメールアイコンを明るく反転（Discord アイコンはそのまま） */
-  .contact-area .account img.mail-icon {
-    filter: invert(0.85);
-  }
+[data-theme="dark"] .contact-area .account a {
+  color: #c8c8c8;
+}
+
+/* 濃いグレーのメールアイコンを明るく反転（Discord アイコンはそのまま） */
+[data-theme="dark"] .contact-area .account img.mail-icon {
+  filter: invert(0.85);
+}
+
+/* テーマ切り替えボタン（ハンバーガーの左隣。出てくる動きもハンバーガーと同じ） */
+.theme-btn {
+  opacity: 0;
+  animation: slideInX 2s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+  animation-delay: 0.5s;
+  position: fixed;
+  top: 30px;
+  right: 76px;
+  width: 30px;
+  height: 30px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  color: rgb(44, 38, 38);
+  cursor: pointer;
+}
+
+.theme-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+[data-theme="dark"] .theme-btn {
+  color: #e0e0e0;
 }

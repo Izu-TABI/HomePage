@@ -45,7 +45,7 @@ function Home() {
             char = this.randomChar()
             this.queue[i].char = char
           }
-          output += `<span className="dud">${char}</span>`
+          output += `<span class="dud">${char}</span>`
         } else {
           output += from
         }
@@ -63,9 +63,7 @@ function Home() {
     }
   }
 
-  // ——————————————————————————————————————————————————
-  // Example
-  // ——————————————————————————————————————————————————
+  
 
   const phrases = [
     "Hello,",
@@ -81,14 +79,17 @@ function Home() {
 
   if (!Loading) {
     let counter = 0
-    const el = document.getElementById('text')
+    const line = document.getElementById('text')
+    const el = document.getElementById('text-scramble')
     const fx = new TextScramble(el)
     const next = () => {
       if ((counter + 1) % phrases.length === 0) {
+        // 最後まで出し終えたら printf(""); を取り外す（App.scss の .code-done）
+        line.classList.add('code-done')
         return;
       } else {
         fx.setText(phrases[counter]).then(() => {
-          setTimeout(next, 1000)
+          setTimeout(next, 800)
         })
         counter = (counter + 1) % phrases.length;
       }
@@ -104,7 +105,14 @@ function Home() {
       <Hamburger />
       {/* <h1 className='home-main-title'>Izu-TABI</h1> */}
       <div className="container">
-        <div id="text"></div>
+        {/* printf(""); はアニメーション中だけ表示して、終わったら取り外す */}
+        <div id="text">
+          <span className="code-line">
+            <span className="code-wrap code-open" aria-hidden="true"><span className="code-func">printf</span>{'("'}</span>
+            <span id="text-scramble"></span>
+            <span className="code-wrap code-close" aria-hidden="true">{'");'}</span>
+          </span>
+        </div>
 
         <div className="profile">
             <p className="profile-affiliation">Informatics and Data Science, Hiroshima University</p>
